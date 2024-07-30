@@ -1,5 +1,5 @@
 ---
-"@wild-duck/mime-builder": patch
+"@ahmedayob/mime-builder": patch
 ---
 
 init commit
