@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, test, vi } from "vitest";
+import { beforeEach, describe, expect, test } from "vitest";
 import { MIMEMessageHeader } from "../MailboxHeader";
 import { Mailbox } from "../../Mailbox/Mailbox";
 import { MIMEError } from "../../Error";
@@ -15,9 +15,10 @@ describe("MIMEMessageHeader", () => {
     });
 
     test("should generate a Message-ID header", () => {
+        // ts-ignore-expect-error
         header.fields.find((field) => field.name === "From")!.value = new Mailbox(
             "test@example.com"
-        );
+        ) as any;
         const messageId = header.fields.find(
             (field) => field.name === "Message-ID"
         )!.generator!();
