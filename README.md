@@ -1,4 +1,3 @@
-````markdown
 # Base64 Utility Library
 
 ## Description
@@ -21,7 +20,6 @@ To include the Base64 utility library in your project, you can either clone the 
 ```sh
 npm install base64-utility-library
 ```
-````
 
 ### Using Yarn
 
@@ -109,7 +107,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) f
 - TextEncoder
 - TextDecoder
 
-```
-
 This README file provides a comprehensive overview of the library, including its features, installation instructions, usage examples, and API reference. It also includes sections for contributing and licensing information.
-```

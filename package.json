@@ -4,6 +4,12 @@
     "main": "index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wildduck2/mime-builder"
+    },
+    "github": "https://github.com/wildduck2/mime-builder",
+    "homepage": "https://github.com/wildduck2/mime-builder",
     "files": [
         "/dist"
     ],
