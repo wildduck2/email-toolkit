@@ -1,5 +1,11 @@
 # @ahmedayob/mime-builder
 
+## 0.1.2
+
+### Patch Changes
+
+- 3b22c45: ignore some npm edits
+
 ## 0.1.1
 
 ### Patch Changes
