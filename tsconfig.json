@@ -1,21 +1,25 @@
 {
     "compilerOptions": {
-        "strict": true,
-        "noImplicitAny": true,
+        /* Base Options: */
         "esModuleInterop": true,
-        "strictNullChecks": true,
-        "target": "ES2022",
-        "moduleResolution": "Node10",
-        "module": "CommonJS",
-        "declaration": true,
-        "isolatedModules": true,
+        "skipLibCheck": true,
+        "target": "es2022",
+        "verbatimModuleSyntax": true,
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "moduleDetection": "force",
+        /* Strictness */
+        "strict": true,
+        "noUncheckedIndexedAccess": true,
+        /* If NOT transpiling with TypeScript: */
+        "moduleResolution": "Bundler",
+        "module": "ESNext",
         "noEmit": true,
-        "outDir": "dist"
-    },
-    "include": [
-        "src"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+        /* If your code runs in the DOM: */
+        "lib": [
+            "es2022",
+            "dom",
+            "dom.iterable"
+        ]
+    }
 }
