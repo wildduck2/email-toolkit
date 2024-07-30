@@ -1,6 +1,6 @@
 {
     "name": "@ahmedayob/mime-builder",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "main": "index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
