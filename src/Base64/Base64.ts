@@ -1,3 +1,5 @@
+const encoder = new TextEncoder();
+
 /**
  * Utility class for Base64 encoding and decoding.
  */
@@ -13,7 +15,9 @@ export class Base64 {
      * console.log(encoded); // Outputs: aGVsbG8gd29ybGQ=
      */
     public static encodeToBase64(input: string): string {
-        return btoa(input);
+        const bytes = encoder.encode(input);
+        const binString = String.fromCodePoint(...bytes);
+        return btoa(binString);
     }
 
     /**
@@ -27,7 +31,13 @@ export class Base64 {
      * console.log(decoded); // Outputs: hello world
      */
     public static decodeToBinary(input: string): string {
-        return atob(input);
+        const binString = atob(input);
+        const bytes = new Uint8Array(binString.length);
+        for (let i = 0; i < binString.length; i++) {
+            bytes[i] = binString.charCodeAt(i);
+        }
+        const decoder = new TextDecoder();
+        return decoder.decode(bytes);
     }
 
     /**
@@ -41,11 +51,10 @@ export class Base64 {
      * console.log(new TextDecoder().decode(buffer)); // Outputs: hello world
      */
     public static decodeToBuffer(input: string): Uint8Array {
-        const binaryString = atob(input);
-        const len = binaryString.length;
-        const bytes = new Uint8Array(len);
-        for (let i = 0; i < len; i++) {
-            bytes[i] = binaryString.charCodeAt(i);
+        const binString = atob(input);
+        const bytes = new Uint8Array(binString.length);
+        for (let i = 0; i < binString.length; i++) {
+            bytes[i] = binString.charCodeAt(i);
         }
         return bytes;
     }
