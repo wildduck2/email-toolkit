@@ -1,4 +1,4 @@
-# @ahmedayob/mime-builder
+# @ahmedayob/email-builder
 
 ## 0.1.3
 

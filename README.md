@@ -1,6 +1,6 @@
-# @ahmedayob/mime-builder
+# @ahmedayob/email-builder
 
-`@ahmedayob/mime-builder` is a TypeScript library for building and manipulating MIME (Multipurpose Internet Mail Extensions) messages. This library provides an easy-to-use API for creating, modifying, and encoding MIME messages, making it ideal for email and other internet-based communication systems.
+`@ahmedayob/email-builder` is a TypeScript library for building and manipulating MIME (Multipurpose Internet Mail Extensions) messages. This library provides an easy-to-use API for creating, modifying, and encoding MIME messages, making it ideal for email and other internet-based communication systems.
 
 ## Features
 
@@ -12,24 +12,24 @@
 
 ## Installation
 
-You can install `@ahmedayob/mime-builder` using npm or yarn:
+You can install `@ahmedayob/email-builder` using npm or yarn:
 
 ```bash
-npm install @ahmedayob/mime-builder
+npm install @ahmedayob/email-builder
 ```
 
 or
 
 ```bash
-yarn add @ahmedayob/mime-builder
+yarn add @ahmedayob/email-builder
 ```
 
 ## Usage
 
-Here’s a basic example of how to use the `@ahmedayob/mime-builder` library:
+Here’s a basic example of how to use the `@ahmedayob/email-builder` library:
 
 ```typescript
-import { MimeBuilder, Base64 } from "@ahmedayob/mime-builder";
+import { MimeBuilder, Base64 } from "@ahmedayob/email-builder";
 
 // Create a new MIME message
 const mimeMessage = new MimeBuilder();
@@ -109,7 +109,7 @@ For questions or feedback, please reach out to [ahmedayobbusiness@gmail.com](mai
 
 ## Links
 
-- [GitHub Repository](https://github.com/wildduck2/mime-builder)
-- [Homepage](https://github.com/wildduck2/mime-builder)
+- [GitHub Repository](https://github.com/wildduck2/email-builder)
+- [Homepage](https://github.com/wildduck2/email-builder)
 
 This README provides a clear overview of the package, including its features, installation instructions, basic usage, API details, and contact information. Make sure to adjust any details if necessary, and add any additional sections or links that may be relevant.
