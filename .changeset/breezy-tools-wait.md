@@ -2,4 +2,4 @@
 "@ahmedayob/mime-builder": patch
 ---
 
-encoding and decodign for web and node
+encoding and decoding for both
