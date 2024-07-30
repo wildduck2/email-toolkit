@@ -1,5 +1,5 @@
 {
-    "name": "@wild-duck/mime-builder",
+    "name": "@ahmedayob/mime-builder",
     "version": "0.0.1",
     "main": "index.js",
     "module": "dist/index.mjs",
