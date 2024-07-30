@@ -12,7 +12,8 @@
         "test": "vitest run",
         "build": "tsup",
         "lint": "tsc",
-        "ci": "pnpm run lint && pnpm run test && pnpm run build"
+        "ci": "pnpm run lint && pnpm run test && pnpm run build",
+        "release": "pnpm run ci && changeset publish"
     },
     "keywords": [],
     "author": "ahmed ayob",
