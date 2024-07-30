@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 0.1.4
+
+### Patch Changes
+
+- 8030d15: readme
+
 ## 0.1.3
 
 ### Patch Changes
