@@ -1,5 +1,11 @@
 # @ahmedayob/mime-builder
 
+## 0.1.1
+
+### Patch Changes
+
+- 261e203: encoding for both client and server
+
 ## 0.1.0
 
 ### Minor Changes
