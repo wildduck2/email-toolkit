@@ -13,7 +13,7 @@ export class Base64 {
      * console.log(encoded); // Outputs: aGVsbG8gd29ybGQ=
      */
     public static encodeToBase64(input: string): string {
-        return Buffer.from(input, "binary").toString("base64");
+        return btoa(input);
     }
 
     /**
@@ -27,21 +27,27 @@ export class Base64 {
      * console.log(decoded); // Outputs: hello world
      */
     public static decodeToBinary(input: string): string {
-        return Buffer.from(input, "base64").toString("binary");
+        return atob(input);
     }
 
     /**
-     * Decodes a Base64 encoded string into a Buffer object.
+     * Decodes a Base64 encoded string into a Uint8Array.
      *
      * @param {string} input - The Base64 encoded string to be decoded.
-     * @returns {Buffer} The decoded buffer.
+     * @returns {Uint8Array} The decoded Uint8Array.
      *
      * @example
-     * const buffer = Base64.deccodeToBuffer('aGVsbG8gd29ybGQ=');
-     * console.log(buffer.toString()); // Outputs: hello world
+     * const buffer = Base64.decodeToBuffer('aGVsbG8gd29ybGQ=');
+     * console.log(new TextDecoder().decode(buffer)); // Outputs: hello world
      */
-    public static deccodeToBuffer(input: string): Buffer {
-        return Buffer.from(input, "base64");
+    public static decodeToBuffer(input: string): Uint8Array {
+        const binaryString = atob(input);
+        const len = binaryString.length;
+        const bytes = new Uint8Array(len);
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binaryString.charCodeAt(i);
+        }
+        return bytes;
     }
 
     /**
