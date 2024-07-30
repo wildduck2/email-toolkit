@@ -16,7 +16,7 @@ describe("Base64", () => {
     });
 
     it("should decode a Base64 string to a Buffer correctly", () => {
-        const result = Base64.deccodeToBuffer(encodedString);
+        const result = Base64.encodeToBase64(encodedString);
         const expectedBuffer = Buffer.from(testString, "binary");
         expect(result).toEqual(expectedBuffer);
     });
@@ -38,7 +38,7 @@ describe("Base64", () => {
     });
 
     it("should handle empty Base64 strings correctly for decoding to Buffer", () => {
-        const result = Base64.deccodeToBuffer("");
+        const result = Base64.decodeToBuffer("");
         const expectedBuffer = Buffer.from("");
         expect(result).toEqual(expectedBuffer);
     });
