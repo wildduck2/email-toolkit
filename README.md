@@ -1,110 +1,122 @@
-# Base64 Utility Library
+Based on the information provided, here’s a complete `README.md` for the `@ahmedayob/mime-builder` package:
 
-## Description
+````markdown
+# @ahmedayob/mime-builder
 
-The Base64 utility library is a lightweight JavaScript library designed for encoding and decoding Base64 strings on the client side. It provides simple and efficient methods to convert text to Base64, decode Base64 back to text, and handle Base64 encoded data with URI encoding. By leveraging modern web APIs like `TextEncoder` and `TextDecoder`, this library ensures compatibility and performance in various web environments.
+`@ahmedayob/mime-builder` is a TypeScript library for building and manipulating MIME (Multipurpose Internet Mail Extensions) messages. This library provides an easy-to-use API for creating, modifying, and encoding MIME messages, making it ideal for email and other internet-based communication systems.
 
 ## Features
 
-- **Encode to Base64**: Convert any string to a Base64 encoded string.
-- **Decode from Base64**: Decode a Base64 encoded string back to its original text.
-- **Decode to Buffer**: Decode a Base64 encoded string into a `Uint8Array` buffer.
-- **URI Encode Base64**: Encode a string to Base64 and then URI encode the result.
+- **Create and Manipulate MIME Messages**: Easily create and edit MIME messages.
+- **Base64 Encoding/Decoding**: Encode and decode MIME parts using Base64 encoding.
+- **Header Management**: Set and retrieve various headers including "Reply-To" and "Bcc".
+- **MIME Boundaries**: Generate unique MIME boundaries for different parts of a message.
+- **Utility Functions**: Convenient functions for encoding and decoding Base64 strings and URI encoding.
 
 ## Installation
 
-To include the Base64 utility library in your project, you can either clone the repository or install it via a package manager.
+You can install `@ahmedayob/mime-builder` using npm or yarn:
 
-### Using npm
-
-```sh
-npm install base64-utility-library
+```bash
+npm install @ahmedayob/mime-builder
 ```
+````
 
-### Using Yarn
+or
 
-```sh
-yarn add base64-utility-library
+```bash
+yarn add @ahmedayob/mime-builder
 ```
 
 ## Usage
 
-First, import the functions from the library:
+Here’s a basic example of how to use the `@ahmedayob/mime-builder` library:
 
-```javascript
-import {
-  toBase64,
-  fromBase64,
-  toBase64EncodeURI,
-} from "base64-utility-library";
+```typescript
+import { MimeBuilder, Base64 } from "@ahmedayob/mime-builder";
+
+// Create a new MIME message
+const mimeMessage = new MimeBuilder();
+mimeMessage.setHeader("From", "sender@example.com");
+mimeMessage.setHeader("To", "recipient@example.com");
+mimeMessage.setHeader("Subject", "Hello World");
+mimeMessage.setHeader("Reply-To", "reply@example.com");
+
+// Add a text part
+mimeMessage.addPart({
+  type: "text/plain",
+  content: "This is a sample email message.",
+});
+
+// Generate MIME boundaries
+mimeMessage.generateBoundaries();
+
+// Retrieve headers
+const headers = mimeMessage.getHeaders();
+console.log(headers);
+
+// Encode a string to Base64
+const encodedString = Base64.encodeToBase64("Sample content");
+console.log(encodedString);
+
+// Decode a Base64 string
+const decodedString = Base64.decodeToBinary(encodedString);
+console.log(decodedString);
 ```
 
-### Encoding to Base64
+## API
 
-Convert a string to Base64:
+### MimeBuilder
 
-```javascript
-const base64String = toBase64("hello world");
-console.log(base64String); // Outputs: aGVsbG8gd29ybGQ=
-```
+- **`setHeader(name: string, value: unknown): string`**  
+  Sets a MIME header with the given name and value.
 
-### Decoding from Base64
+- **`getHeader(name: string): string`**  
+  Retrieves the value of a specified MIME header.
 
-Decode a Base64 encoded string back to its original text:
+- **`setHeaders(obj: Record<string, unknown>): string[]`**  
+  Sets multiple headers from an object where keys are header names and values are their corresponding values.
 
-```javascript
-const originalText = fromBase64("aGVsbG8gd29ybGQ=");
-console.log(originalText); // Outputs: hello world
-```
+- **`getHeaders(): Record<string, unknown>`**  
+  Retrieves all headers as an object.
 
-### URI Encode Base64
+- **`generateBoundaries(): void`**  
+  Generates unique MIME boundaries for different parts of the message.
 
-Encode a string to Base64 and then URI encode the result:
+- **`isArray(v: unknown): v is Array<unknown>`**  
+  Checks if a value is an array.
 
-```javascript
-const uriEncodedBase64 = toBase64EncodeURI("hello world");
-console.log(uriEncodedBase64); // Outputs: aGVsbG8gd29ybGQ%3D
-```
+- **`isObject(v: unknown): v is Object`**  
+  Checks if a value is an object.
 
-## API Reference
+### Base64
 
-### `toBase64(text: string): string`
+- **`encodeToBase64(input: string): string`**  
+  Encodes a string into Base64.
 
-Encodes a given string into Base64.
+- **`decodeToBinary(input: string): string`**  
+  Decodes a Base64 encoded string into its original binary form.
 
-- **text**: The string to be encoded.
-- **returns**: The Base64 encoded string.
+- **`deccodeToBuffer(input: string): Buffer`**  
+  Decodes a Base64 encoded string into a Buffer object.
 
-### `fromBase64(base64: string): string`
-
-Decodes a Base64 encoded string back to its original text.
-
-- **base64**: The Base64 encoded string to be decoded.
-- **returns**: The decoded string.
-
-### `toBase64EncodeURI(text: string): string`
-
-Encodes a string into Base64 and then URI encodes the result.
-
-- **text**: The string to be encoded and URI encoded.
-- **returns**: The URI encoded Base64 string.
-
-## Contributing
-
-We welcome contributions! Please read our [CONTRIBUTING](CONTRIBUTING.md) guidelines for more details.
+- **`toBufferURI(input: string): string`**  
+  Encodes a string to Base64 and then URI encodes the result.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Keywords
+## Contact
 
-- Base64
-- Encoding
-- Decoding
-- JavaScript
-- Client-side
-- TextEncoder
-- TextDecoder
+For questions or feedback, please reach out to [ahmedayobbusiness@gmail.com](mailto:ahmedayobbusiness@gmail.com).
 
-This README file provides a comprehensive overview of the library, including its features, installation instructions, usage examples, and API reference. It also includes sections for contributing and licensing information.
+## Links
+
+- [GitHub Repository](https://github.com/wildduck2/mime-builder)
+- [Homepage](https://github.com/wildduck2/mime-builder)
+
+```
+
+This README provides a clear overview of the package, including its features, installation instructions, basic usage, API details, and contact information. Make sure to adjust any details if necessary, and add any additional sections or links that may be relevant.
+```
