@@ -1,5 +1,11 @@
 # @ahmedayob/mime-builder
 
+## 0.1.3
+
+### Patch Changes
+
+- 15f318f: changing name and some types
+
 ## 0.1.2
 
 ### Patch Changes
