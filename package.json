@@ -16,10 +16,21 @@
         "ci": "pnpm run lint && pnpm run test && pnpm run build",
         "release": "pnpm run ci && changeset publish"
     },
-    "keywords": [],
+    "keywords": [
+        "Base64",
+        "Encoding",
+        "Decoding",
+        "TextEncoder",
+        "TextDecoder",
+        "Client-side",
+        "typescript",
+        "Utility",
+        "URI Encoding",
+        "Web API"
+    ],
     "author": "ahmed ayob",
     "license": "MIT",
-    "description": "a lib for building mime types",
+    "description": "The Base64 utility class is a lightweight JavaScript library designed for encoding and decoding Base64 strings on the client side. It provides simple and efficient methods to convert text to Base64, decode Base64 back to text, and handle Base64 encoded data with URI encoding. By leveraging modern web APIs like TextEncoder and TextDecoder, this library ensures compatibility and performance in various web environments.",
     "devDependencies": {
         "@changesets/cli": "^2.27.7",
         "@types/node": "^22.0.0",
