@@ -1,6 +1,3 @@
-Based on the information provided, here’s a complete `README.md` for the `@ahmedayob/mime-builder` package:
-
-````markdown
 # @ahmedayob/mime-builder
 
 `@ahmedayob/mime-builder` is a TypeScript library for building and manipulating MIME (Multipurpose Internet Mail Extensions) messages. This library provides an easy-to-use API for creating, modifying, and encoding MIME messages, making it ideal for email and other internet-based communication systems.
@@ -20,7 +17,6 @@ You can install `@ahmedayob/mime-builder` using npm or yarn:
 ```bash
 npm install @ahmedayob/mime-builder
 ```
-````
 
 or
 
@@ -68,39 +64,39 @@ console.log(decodedString);
 
 ### MimeBuilder
 
-- **`setHeader(name: string, value: unknown): string`**  
+- **`setHeader(name: string, value: unknown): string`**
   Sets a MIME header with the given name and value.
 
-- **`getHeader(name: string): string`**  
+- **`getHeader(name: string): string`**
   Retrieves the value of a specified MIME header.
 
-- **`setHeaders(obj: Record<string, unknown>): string[]`**  
+- **`setHeaders(obj: Record<string, unknown>): string[]`**
   Sets multiple headers from an object where keys are header names and values are their corresponding values.
 
-- **`getHeaders(): Record<string, unknown>`**  
+- **`getHeaders(): Record<string, unknown>`**
   Retrieves all headers as an object.
 
-- **`generateBoundaries(): void`**  
+- **`generateBoundaries(): void`**
   Generates unique MIME boundaries for different parts of the message.
 
-- **`isArray(v: unknown): v is Array<unknown>`**  
+- **`isArray(v: unknown): v is Array<unknown>`**
   Checks if a value is an array.
 
-- **`isObject(v: unknown): v is Object`**  
+- **`isObject(v: unknown): v is Object`**
   Checks if a value is an object.
 
 ### Base64
 
-- **`encodeToBase64(input: string): string`**  
+- **`encodeToBase64(input: string): string`**
   Encodes a string into Base64.
 
-- **`decodeToBinary(input: string): string`**  
+- **`decodeToBinary(input: string): string`**
   Decodes a Base64 encoded string into its original binary form.
 
-- **`deccodeToBuffer(input: string): Buffer`**  
+- **`deccodeToBuffer(input: string): Buffer`**
   Decodes a Base64 encoded string into a Buffer object.
 
-- **`toBufferURI(input: string): string`**  
+- **`toBufferURI(input: string): string`**
   Encodes a string to Base64 and then URI encodes the result.
 
 ## License
@@ -116,7 +112,4 @@ For questions or feedback, please reach out to [ahmedayobbusiness@gmail.com](mai
 - [GitHub Repository](https://github.com/wildduck2/mime-builder)
 - [Homepage](https://github.com/wildduck2/mime-builder)
 
-```
-
 This README provides a clear overview of the package, including its features, installation instructions, basic usage, API details, and contact information. Make sure to adjust any details if necessary, and add any additional sections or links that may be relevant.
-```
