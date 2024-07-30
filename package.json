@@ -1,0 +1,24 @@
+{
+    "name": "@wild-duck/mime-builder",
+    "version": "0.0.1",
+    "main": "index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "lint": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "ahmed ayob",
+    "license": "MIT",
+    "description": "a lib for building mime types",
+    "devDependencies": {
+        "@changesets/cli": "^2.27.7",
+        "tsup": "^8.2.3",
+        "typescript": "^5.5.4"
+    }
+}
