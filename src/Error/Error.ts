@@ -1,7 +1,7 @@
 import type { EmailErrorInterface } from "./Error.types";
 
 export class EmailError extends Error implements EmailErrorInterface {
-  name: string = "";
+  name: string;
 
   description: string = "";
 
