@@ -11,7 +11,7 @@ export function createMimeMessage(): MIMEMessageClass {
   return new MIMEMessage();
 }
 
-new EmailBuilder();
+// new EmailBuilder();
 
 // const msg = new MIMEMessage();
 // msg.setSender({ name: "Lorem Ipsum", addr: "lorem@ipsum.com" });

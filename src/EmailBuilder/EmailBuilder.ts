@@ -35,7 +35,7 @@ export class EmailBuilder implements EmailBuilderClass {
       },
       encoding: "7bit",
       contentType: "text/plain",
-    }).asEncoded();
+    }).asRaw();
 
     console.log(foo);
   }
