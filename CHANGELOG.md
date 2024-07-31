@@ -1,5 +1,12 @@
 # @ahmedayob/email-builder
 
+## 0.1.5
+
+### Patch Changes
+
+- b682de3: refactoring the EmailBuilder
+- 81d732b: refcatoring the lib with EmailBuilder
+
 ## 0.1.4
 
 ### Patch Changes
