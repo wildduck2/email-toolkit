@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, test } from "vitest";
 import { MIMEMessageContent } from "../../MimeMessageContent";
-import { MIMEError } from "../../Error";
+import { EmailErrorInterface } from "../../Error";
 import { MIMEMessage } from "../MimeMessage";
 
 describe("MIMEMessage", () => {
@@ -22,7 +22,7 @@ describe("MIMEMessage", () => {
                 contentType: "text/plain",
             });
         }).toThrow(
-            new MIMEError(
+            new EmailError(
                 "MIMETEXT_INVALID_MESSAGE_TYPE",
                 `Valid content types are text/html, text/plain but you specified "none".`
             )
@@ -59,7 +59,7 @@ describe("MIMEMessage", () => {
         expect(() => {
             message.asRaw();
         }).toThrow(
-            new MIMEError("MIMETEXT_MISSING_HEADER", 'The "From" header is required.')
+            new EmailError("MIMETEXT_MISSING_HEADER", 'The "From" header is required.')
         );
     });
 

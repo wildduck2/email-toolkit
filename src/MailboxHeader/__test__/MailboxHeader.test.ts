@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, test } from "vitest";
 import { MIMEMessageHeader } from "../MailboxHeader";
 import { Mailbox } from "../../Mailbox/Mailbox";
-import { MIMEError } from "../../Error";
+import { EmailErrorInterface } from "../../Error";
 
 describe("MIMEMessageHeader", () => {
     let header: MIMEMessageHeader;
@@ -28,7 +28,7 @@ describe("MIMEMessageHeader", () => {
     test("should throw an error if a required field is missing", () => {
         header.set("From", new Mailbox("sender@example.com")); // Ensure 'From' is set
         header.fields.find((field) => field.name === "Subject")!.value = undefined;
-        expect(() => header.dump()).toThrow(MIMEError);
+        expect(() => header.dump()).toThrow(EmailError);
     });
 
     test("should set and get a custom header", () => {
@@ -104,6 +104,6 @@ describe("MIMEMessageHeader", () => {
     test("should throw an error if a required field is missing", () => {
         header.set("From", new Mailbox("sender@example.com")); // Ensure 'From' is set
         header.fields.find((field) => field.name === "Subject")!.value = undefined;
-        expect(() => header.dump()).toThrow(MIMEError);
+        expect(() => header.dump()).toThrow(EmailError);
     });
 });

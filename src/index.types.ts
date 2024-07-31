@@ -62,4 +62,3 @@ export type ContentOptions = {
 export interface AttachmentOptions extends ContentOptions {
     inline?: boolean;
     filename: string;
-}

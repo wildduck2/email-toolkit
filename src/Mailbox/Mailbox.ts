@@ -1,4 +1,4 @@
-import { MIMEError } from "../Error";
+import { EmailErrorInterface } from "../Error";
 import type {
   Email,
   MailboxAddrObject,
@@ -55,7 +55,7 @@ export class Mailbox implements MailboxClass {
       this.addr = input;
       return this;
     }
-    throw new MIMEError(
+    throw new EmailError(
       "MIMETEXT_INVALID_MAILBOX",
       "The provided input does not conform to a valid mailbox address format. Please ensure the input is either a properly formatted string or an object with an 'addr' property."
     );

@@ -1,4 +1,4 @@
-export interface MIMEErrorClass {
-    name: string;
-    description: string;
+export interface EmailErrorInterface {
+  name: string;
+  description: string;
 }

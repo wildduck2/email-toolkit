@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { Mailbox } from "../Mailbox";
-import { MIMEError } from "../../Error";
+import { EmailErrorInterface } from "../../Error";
 
 describe("Mailbox Class", () => {
     it("should initialize with a MailboxAddrObject and correctly set properties", () => {
@@ -32,7 +32,7 @@ describe("Mailbox Class", () => {
     });
 
     it("should throw MIMEError for invalid input", () => {
-        expect(() => new Mailbox(123 as any)).toThrow(MIMEError);
+        expect(() => new Mailbox(123 as any)).toThrow(EmailError);
     });
 
     it("should correctly parse and dump mailbox with name and address", () => {

@@ -1,5 +1,5 @@
 import { Base64 } from "../Base64";
-import { MIMEError } from "../Error";
+import { EmailErrorInterface } from "../Error";
 import type { HeaderField, MailboxClass } from "../index.types";
 import { Mailbox } from "../Mailbox/Mailbox";
 import {
@@ -83,7 +83,7 @@ export class MIMEMessageHeader implements MIMEMessageHeaderClass {
      * Each field is converted according to its specific dumping function
      * or defaulted to its string value if no dumping function is provided.
      * @returns {string} The formatted header fields as a string.
-     * @throws {MIMEError} Throws an error if a required field is missing.
+     * @throws {EmailErrorInterface} Throws an error if a required field is missing.
      */
     dump(): string {
         let lines = "";
@@ -92,7 +92,7 @@ export class MIMEMessageHeader implements MIMEMessageHeaderClass {
             const isValueDefinedByUser =
                 field.value !== undefined && field.value !== null;
             if (!isValueDefinedByUser && field.required) {
-                throw new MIMEError(
+                throw new EmailError(
                     "MIMETEXT_MISSING_HEADER",
                     `The "${field.name}" header is required.`
                 );
@@ -142,7 +142,7 @@ export class MIMEMessageHeader implements MIMEMessageHeaderClass {
      * @param {string} name - The name of the header field to set.
      * @param {any} value - The value to set for the header field.
      * @returns {HeaderField} The updated or newly created header field.
-     * @throws {MIMEError} Throws an error if the value is invalid for the field.
+     * @throws {EmailErrorInterface} Throws an error if the value is invalid for the field.
      */
     set(name: string, value: any): HeaderField {
         const fieldMatcher = (obj: HeaderField) =>
@@ -152,7 +152,7 @@ export class MIMEMessageHeader implements MIMEMessageHeaderClass {
             const ind = this.fields.findIndex(fieldMatcher);
             const field = this.fields[ind];
             if (field!.validate && !field!.validate(value)) {
-                throw new MIMEError(
+                throw new EmailError(
                     "MIMETEXT_INVALID_HEADER_VALUE",
                     "You specified an invalid value for the header " + name
                 );
@@ -172,12 +172,12 @@ export class MIMEMessageHeader implements MIMEMessageHeaderClass {
      * Adds a custom header field to the list of header fields.
      * @param {HeaderField} obj - The custom header field to add.
      * @returns {HeaderField} The added custom header field.
-     * @throws {MIMEError} Throws an error if the header field object is invalid.
+     * @throws {EmailErrorInterface} Throws an error if the header field object is invalid.
      */
     setCustom(obj: HeaderField): HeaderField {
         if (this.isHeaderField(obj)) {
             if (typeof obj.value !== "string") {
-                throw new MIMEError(
+                throw new EmailError(
                     "MIMETEXT_INVALID_HEADER_FIELD",
                     "Custom header must have a value."
                 );
@@ -185,7 +185,7 @@ export class MIMEMessageHeader implements MIMEMessageHeaderClass {
             this.fields.push(obj);
             return obj;
         }
-        throw new MIMEError(
+        throw new EmailError(
             "MIMETEXT_INVALID_HEADER_FIELD",
             "You specified an invalid header field object."
         );
