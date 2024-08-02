@@ -49,17 +49,8 @@ export class EmailBuilder implements EmailBuilderClass {
   public createFileWithMessage() {
     const binary = Base64.encodeToBase64(this.asRaw());
     const bytes = Base64.decodeToBuffer(binary);
-
-    // Create an ArrayBuffer and a DataView to work with the byte array
     const arrayBuffer = new Uint8Array(bytes);
-
-    const fileName = "message.eml";
-    const fileUrl = URL.createObjectURL(
-      new Blob([arrayBuffer], { type: "application/octet-stream" })
-    );
-
     return {
-      name: fileName,
       size: arrayBuffer.byteLength,
       type: "application/octet-stream",
       data: binary,
