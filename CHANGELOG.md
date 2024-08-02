@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 0.1.7
+
+### Patch Changes
+
+- 3277acd: patch buffer
+
 ## 0.1.6
 
 ### Patch Changes
