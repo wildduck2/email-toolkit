@@ -15,7 +15,6 @@ import {
   type HeadersType,
 } from "./EmailBuilder.types";
 import type { ContentTransferEncoding } from "../index.types";
-import "blob-polyfill";
 
 export class EmailBuilder implements EmailBuilderClass {
   headers: HeadersType | null = null;
@@ -51,15 +50,10 @@ export class EmailBuilder implements EmailBuilderClass {
   public createFileWithMessage() {
     const binary = Base64.encodeToBase64(this.asRaw());
     const bytes = Base64.decodeToBuffer(binary);
-    const byteArray = new Uint8Array(bytes);
-    const blob = new Blob([byteArray], {
-      type: "application/octet-stream",
-    });
-    const url = URL.createObjectURL(blob);
+    const buffer = Buffer.from(bytes);
     return {
-      name: url.split(":")[2],
-      size: blob.size,
-      type: blob.type,
+      size: buffer.length,
+      type: "application/octet-stream",
       data: binary,
     };
   }
