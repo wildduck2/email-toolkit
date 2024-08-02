@@ -25,26 +25,25 @@ export class EmailBuilder implements EmailBuilderClass {
   applicationSignature: ApplicationSignature | null = null;
 
   constructor() {
-    const foo = this.addMessage({
-      data: "<p>asdf</p>",
-      charset: "UTF-8",
-      headers: {
-        Date: "Wed, 31 Jul 2024 13:39:10 GMT",
-        From: "wildduck2/email-builder <email-builder@noreply.github.com>",
-        To: "Ahmed Ayob <notifications@github.com>",
-        Subject:
-          "RE: [wildduck2/email-builder] Run failed: CI - main (b682de3)",
-        "In-Reply-To": "19108cbf60f51f1a",
-        "Content-Type": "text/html",
-        "Content-Transfer-Encoding": "base64",
-      },
-      encoding: "7bit",
-      contentType: "text/plain",
-    }).asRaw();
-
-    const binary = this.createFileWithMessage();
+    // const foo = this.addMessage({
+    //   data: "<p>asdf</p>",
+    //   charset: "UTF-8",
+    //   headers: {
+    //     Date: "Wed, 31 Jul 2024 13:39:10 GMT",
+    //     From: "wildduck2/email-builder <email-builder@noreply.github.com>",
+    //     To: "Ahmed Ayob <notifications@github.com>",
+    //     Subject:
+    //       "RE: [wildduck2/email-builder] Run failed: CI - main (b682de3)",
+    //     "In-Reply-To": "19108cbf60f51f1a",
+    //     "Content-Type": "text/html",
+    //     "Content-Transfer-Encoding": "base64",
+    //   },
+    //   encoding: "7bit",
+    //   contentType: "text/plain",
+    // }).asRaw();
+    // const binary = this.createFileWithMessage();
     // console.log(foo);
-    console.log(binary);
+    // console.log(binary);
   }
 
   public createFileWithMessage() {
