@@ -15,6 +15,7 @@ import {
   type HeadersType,
 } from "./EmailBuilder.types";
 import type { ContentTransferEncoding } from "../index.types";
+import "blob-polyfill";
 
 export class EmailBuilder implements EmailBuilderClass {
   headers: HeadersType | null = null;
