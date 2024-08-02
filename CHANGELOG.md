@@ -1,5 +1,12 @@
 # @ahmedayob/email-builder
 
+## 0.1.6
+
+### Patch Changes
+
+- 9419434: create file with message content and adding some other functionality to add some other data without adding the message itself like chunks
+- 08ab41b: buffer error patched
+
 ## 0.1.5
 
 ### Patch Changes
