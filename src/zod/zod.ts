@@ -24,3 +24,5 @@ export const HeadersTypeSchema = z.object({
   "Content-Disposition": z.string().optional(),
   "Content-ID": z.string().optional(),
 });
+
+export const LabelsTypeSchema = z.array(z.string().toUpperCase());

@@ -5,8 +5,29 @@ import type { ContentTransferEncoding } from "../index.types";
 export interface EmailBuilderClass {
   headers: HeadersType | null;
   snippet: string;
-  labels: string[];
+  labels: Uppercase<string>[];
   MimeType: string;
+  applicationSignature: ApplicationSignature | null;
+  setHeaders(headers: HeadersType): this;
+  setSnippet(snippet: string): this;
+  setLabels(labels: string[]): this;
+  setData(data: string): this;
+  setApplicationSignature(applicationSignature: ApplicationSignature): this;
+  setMimeType(mimeType: string): this;
+  addMessage({
+    data,
+    charset,
+    headers,
+    encoding,
+    contentType,
+  }: AddMessageType): this;
+  asRaw(): string;
+  asEncoded(): string;
+}
+
+export interface ApplicationSignature {
+  name: string;
+  url: string;
 }
 
 export interface EmailType {
@@ -70,3 +91,17 @@ export type AddMessageType = {
   headers?: HeadersType | undefined;
   charset?: string | undefined;
 };
+
+export interface RawMessage {
+  Date: string;
+  From: ValueType | undefined;
+  To: ValueType | undefined;
+  inReplyTo: string | undefined;
+  Cc?: ValueType | undefined;
+  Bcc?: ValueType | undefined;
+  Subject: string | undefined;
+  data: string;
+  "MIME-Version": string;
+  "Content-Transfer-Encoding": string | undefined;
+  "Content-Type": string | undefined;
+}
