@@ -14,6 +14,9 @@ importers:
       '@types/node':
         specifier: ^22.0.0
         version: 22.0.0
+      blob-polyfill:
+        specifier: ^9.0.20240710
+        version: 9.0.20240710
       tsup:
         specifier: ^8.2.3
         version: 8.2.3(postcss@8.4.40)(typescript@5.5.4)
@@ -580,6 +583,9 @@ packages:
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
+
+  blob-polyfill@9.0.20240710:
+    resolution: {integrity: sha512-DPUO/EjNANCgSVg0geTy1vmUpu5hhp9tV2F7xUSTUd1jwe4XpwupGB+lt5PhVUqpqAk+zK1etqp6Pl/HVf71Ug==}
 
   brace-expansion@2.0.1:
     resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
@@ -1884,6 +1890,8 @@ snapshots:
       is-windows: 1.0.2
 
   binary-extensions@2.3.0: {}
+
+  blob-polyfill@9.0.20240710: {}
 
   brace-expansion@2.0.1:
     dependencies:

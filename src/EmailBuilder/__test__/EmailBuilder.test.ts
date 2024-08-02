@@ -2,6 +2,7 @@ import { describe, it, expect, beforeEach } from "vitest";
 import { EmailBuilder } from "../EmailBuilder";
 import type { AddMessageType, HeadersType } from "../EmailBuilder.types";
 import { Base64 } from "../../Base64";
+import "blob-polyfill";
 
 describe("EmailBuilder", () => {
   let emailBuilder: EmailBuilder;
