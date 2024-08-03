@@ -33,7 +33,7 @@ export class EmailBuilder implements EmailBuilderClass {
     //     From: "wildduck2/email-builder <email-builder@noreply.github.com>",
     //     To: "Ahmed Ayob <notifications@github.com>",
     //     Subject:
-    //       "RE: [wildduck2/email-builder] Run failed: CI - main (b682de3)",
+    //       "RE: [wildduck2isdfffffffffffffffffffffffffffffffffffffffffffffdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd/email-builder] Run failed: CI - main (b682de3)",
     //     "In-Reply-To": "19108cbf60f51f1a",
     //     "Content-Type": "text/html",
     //     "Content-Transfer-Encoding": "base64",
@@ -48,10 +48,8 @@ export class EmailBuilder implements EmailBuilderClass {
 
   public createFileWithMessage() {
     const binary = Base64.encodeToBase64(this.asRaw());
-    const bytes = Base64.decodeToBuffer(binary);
-    const arrayBuffer = new Uint8Array(bytes);
     return {
-      size: arrayBuffer.byteLength,
+      size: binary.length,
       type: "application/octet-stream",
       data: binary,
     };

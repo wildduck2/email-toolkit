@@ -72,4 +72,8 @@ export class Base64 {
   public static toBufferURI(input: string): string {
     return encodeURIComponent(this.encodeToBase64(input));
   }
+
+  public static encodeToBuffer(input: string): Uint8Array {
+    return Base64.decodeToBuffer(this.encodeToBase64(input));
+  }
 }

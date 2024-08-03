@@ -1,3 +1,5 @@
+import { Base64 } from "./Base64";
+
 export * from "./Base64";
 export * from "./Error";
 export * from "./EmailBuilder";
