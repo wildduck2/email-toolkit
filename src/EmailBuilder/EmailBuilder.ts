@@ -172,3 +172,32 @@ export class EmailBuilder
 //    return this;
 //  }
 //
+//  public setData(data: string): this {
+//    this.messageBody = data;
+//    return this;
+//  }
+//
+//  public setSnippet(snippet: string): this {
+//    this.snippet = snippet;
+//    return this;
+//  }
+//
+//  public setHeaders(headers: HeadersType): this {
+//    const { data: parsedHeaders, error } = this.isValidHeaders(headers);
+//    if (error) {
+//      this.logError(error);
+//    }
+//
+//    this.headers = parsedHeaders as HeadersType;
+//    return this;
+//  }
+//
+//  public setLabels(labels: Uppercase<string>[]): this {
+//    const { data: parsedLabels, error } = this.isValidLabels(labels);
+//    if (error) {
+//      this.logError(error);
+//    }
+//
+//    this.labels = parsedLabels as Uppercase<string>[];
+//    return this;
+//  }

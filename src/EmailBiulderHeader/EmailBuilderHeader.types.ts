@@ -1,14 +1,16 @@
 import type { z } from "zod";
-import type { MIMEType, TupleUnion } from "../EmailBuilder";
-import type { HeadersTypeSchema } from "../zod/zod";
+import type { MIMEType } from "../EmailBuilder";
+import type { HeadersTypeSchema, CharsetType } from "../zod";
 import type { ContentTransferEncoding } from "../index.types";
+import type { CharacterEncoding } from "crypto";
 
 export interface EmailBuilderHeaderClass {
   headers: HeadersType;
   getHeaders(): HeadersType;
-  setMimeType(mimeType: TupleUnion<MIMEType>): this;
 }
 export type ValueType = `${string} <${string}@${string}.${string}>`;
+
+export type TupleUnion<T extends readonly unknown[]> = T[number];
 
 type HeaderskeyNameType = z.infer<typeof HeadersTypeSchema>;
 export type HeadernameType = keyof HeaderskeyNameType;
@@ -21,7 +23,6 @@ type ExcludedHeadernameType = Exclude<
   | "Bcc"
   | "Content-Type"
   | "Content-Transfer-Encoding"
-  | "Content-Disposition"
   | "Content-ID"
 >;
 
@@ -32,9 +33,7 @@ export type HeadersType = {
   To?: ValueType | undefined;
   Cc?: ValueType | undefined;
   Bcc?: ValueType | undefined;
-  "Delivered-To": string | undefined;
-  "Mime-Type": TupleUnion<MIMEType>;
+  Charset: TupleUnion<typeof CharsetType> | undefined;
+  "Content-Type": TupleUnion<MIMEType> | undefined;
   "Content-Transfer-Encoding"?: ContentTransferEncoding | undefined;
-  "Content-Disposition"?: string | undefined;
-  "Content-ID"?: string | undefined;
 };

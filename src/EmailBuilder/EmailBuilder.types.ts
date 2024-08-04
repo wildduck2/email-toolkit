@@ -80,8 +80,6 @@ export interface RawMessage {
   "Mime-Type": TupleUnion<MIMEType> | undefined;
 }
 
-export type TupleUnion<T extends readonly unknown[]> = T[number];
-
 export type AttachmentType = {
   size: number;
   attachmentId: string;

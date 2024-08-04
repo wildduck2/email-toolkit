@@ -8,9 +8,17 @@ export * from "./EmailBuilder";
 import { EmailBuilder } from "./EmailBuilder";
 
 const header = new EmailBuilderHeader();
-header.setMimeType("text/html");
-header.setFrom("ahmed <ahmed@gmail.com>");
-header.setTo("ahmed <ahmed@gmail.com>");
+header
+  .setFrom("ahmed <ahmed@gmail.com>")
+  .setTo("ahmed <ahmed@gmail.com>")
+  .setCc("ahmed <ahmed@gmai.com>")
+  .setBcc("ahmed <ahmed@gmai.com>")
+  .setSubject("this is wild duck email test subject")
+  .setInReplyTo("ahmed@gmail.com")
+  .setMIMEVersion("1.0")
+  .setContentTransferEncoding("quoted-printable")
+  .setContentType("text/html")
+  .setCharset("utf8");
 
 console.log(header.getHeaders());
 

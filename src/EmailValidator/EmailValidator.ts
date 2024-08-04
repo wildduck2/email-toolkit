@@ -34,6 +34,12 @@ export class EmailValidator {
     return StringSchema.safeParse(charset);
   }
 
+  public static isValidMimeType(
+    mimeType: string
+  ): z.SafeParseReturnType<string, string> {
+    return StringSchema.safeParse(mimeType);
+  }
+
   public static isValidContentType(
     contentType: string
   ): z.SafeParseReturnType<string, string> {
