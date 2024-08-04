@@ -6,4 +6,4 @@ export const ContentTransferEncoding = [
   "quoted-printable",
 ] as const;
 
-export const ValidTypes = ["text/html", "text/plain"] as const;
+export const MIMETypes = ["text/html", "text/plain"] as const;

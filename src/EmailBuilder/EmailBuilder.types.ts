@@ -1,6 +1,9 @@
 import type { z } from "zod";
 import { HeadersTypeSchema } from "../zod/zod";
 import type { ContentTransferEncoding } from "../index.types";
+import type { MIMETypes } from "../zod/zod.types";
+
+export type MIMEType = typeof MIMETypes;
 
 export interface EmailBuilderClass {
   headers: HeadersType | null;
@@ -54,42 +57,13 @@ export interface SetHeaderType {
   value: ValueType;
 }
 
-export type ValueType = `${string} <${string}@${string}.${string}>`;
-
-type HeaderskeyNameType = z.infer<typeof HeadersTypeSchema>;
-export type HeadernameType = keyof HeaderskeyNameType;
-
-type ExcludedHeadernameType = Exclude<
-  HeadernameType,
-  | "From"
-  | "To"
-  | "Cc"
-  | "Bcc"
-  | "Content-Type"
-  | "Content-Transfer-Encoding"
-  | "Content-Disposition"
-  | "Content-ID"
->;
-
-export type HeadersType = {
-  [key in ExcludedHeadernameType]?: string | undefined;
-} & {
-  From?: ValueType | undefined;
-  To?: ValueType | undefined;
-  Cc?: ValueType | undefined;
-  Bcc?: ValueType | undefined;
-  "Content-Type": string;
-  "Content-Transfer-Encoding"?: ContentTransferEncoding | undefined;
-  "Content-Disposition"?: string | undefined;
-  "Content-ID"?: string | undefined;
-};
-
 export type AddMessageType = {
   data: string;
   encoding?: ContentTransferEncoding | undefined;
-  contentType: string;
+  contentType?: string;
   headers?: HeadersType | undefined;
   charset?: string | undefined;
+  attachments?: AttachmentType[] | undefined;
 };
 
 export interface RawMessage {
@@ -103,5 +77,16 @@ export interface RawMessage {
   data: string;
   "MIME-Version": string;
   "Content-Transfer-Encoding": string | undefined;
-  "Content-Type": string | undefined;
+  "Mime-Type": TupleUnion<MIMEType> | undefined;
 }
+
+export type TupleUnion<T extends readonly unknown[]> = T[number];
+
+export type AttachmentType = {
+  size: number;
+  attachmentId: string;
+  attachmentContent: string;
+  headers: HeadersType;
+  filename: string;
+  mimeType: TupleUnion<MIMEType>;
+};

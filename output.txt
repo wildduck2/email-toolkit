@@ -1,0 +1,1054 @@
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="margin: 0; padding: 0;"><head>
+    <style>
+.rollover:hover .rollover-second {
+  max-height: none!important;
+  display: block!important;
+}
+span.MsoHyperlink,
+span.MsoHyperlinkFollowed {
+  color: inherit;
+  mso-style-priority: 99;
+}
+.es-header-body a:hover {
+  color: #3169f5!important;
+}
+.es-content-body a:hover {
+  color: #3169f5!important;
+}
+.es-footer-body a:hover {
+  color: #3169f5!important;
+}
+.es-infoblock a:hover {
+  color: #3169f5!important;
+}
+.es-button-border:hover {
+  border-color: #000000 #000000 #000000 #000000!important;
+  background: #525866!important;
+}
+.es-button-border:hover a.es-button,
+.es-button-border:hover button.es-button {
+  background: #525866!important;
+  color: #ffffff!important;
+}
+@media only screen and (max-width:600px) {
+  .es-m-p8r {
+    padding-right: 8px!important;
+  }
+
+  .es-m-p20b {
+    padding-bottom: 20px!important;
+  }
+
+  .es-m-p8l {
+    padding-left: 8px!important;
+  }
+
+  .es-m-p16r {
+    padding-right: 16px!important;
+  }
+
+  .es-p-default {  }
+
+  *[class="gmail-fix"] {
+    display: none!important;
+  }
+
+  p,
+a {
+    line-height: 120%!important;
+  }
+
+  h1,
+h1 a {
+    line-height: 120%!important;
+  }
+
+  h2,
+h2 a {
+    line-height: 120%!important;
+  }
+
+  h3,
+h3 a {
+    line-height: 120%!important;
+  }
+
+  h4,
+h4 a {
+    line-height: 120%!important;
+  }
+
+  h5,
+h5 a {
+    line-height: 120%!important;
+  }
+
+  h6,
+h6 a {
+    line-height: 120%!important;
+  }
+
+  .es-header-body p {
+    margin-bottom: 4px!important;
+  }
+
+  .es-content-body p {
+    margin-bottom: 4px!important;
+  }
+
+  .es-footer-body p {
+    margin-bottom: 4px!important;
+  }
+
+  .es-infoblock p {
+    margin-bottom: 4px!important;
+  }
+
+  h1 {
+    font-size: 28px!important;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 24px!important;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 22px!important;
+    text-align: left;
+  }
+
+  h4 {
+    font-size: 22px!important;
+    text-align: left;
+  }
+
+  h5 {
+    font-size: 20px!important;
+    text-align: left;
+  }
+
+  h6 {
+    font-size: 18px!important;
+    text-align: left;
+  }
+
+  .es-header-body h1 a,
+.es-content-body h1 a,
+.es-footer-body h1 a {
+    font-size: 28px!important;
+  }
+
+  .es-header-body h2 a,
+.es-content-body h2 a,
+.es-footer-body h2 a {
+    font-size: 24px!important;
+  }
+
+  .es-header-body h3 a,
+.es-content-body h3 a,
+.es-footer-body h3 a {
+    font-size: 22px!important;
+  }
+
+  .es-header-body h4 a,
+.es-content-body h4 a,
+.es-footer-body h4 a {
+    font-size: 22px!important;
+  }
+
+  .es-header-body h5 a,
+.es-content-body h5 a,
+.es-footer-body h5 a {
+    font-size: 20px!important;
+  }
+
+  .es-header-body h6 a,
+.es-content-body h6 a,
+.es-footer-body h6 a {
+    font-size: 18px!important;
+  }
+
+  .es-menu td a {
+    font-size: 14px!important;
+  }
+
+  .es-header-body p,
+.es-header-body a {
+    font-size: 14px!important;
+  }
+
+  .es-content-body p,
+.es-content-body a {
+    font-size: 14px!important;
+  }
+
+  .es-footer-body p,
+.es-footer-body a {
+    font-size: 14px!important;
+  }
+
+  .es-infoblock p,
+.es-infoblock a {
+    font-size: 12px!important;
+  }
+
+  .es-m-txt-c,
+.es-m-txt-c h1,
+.es-m-txt-c h2,
+.es-m-txt-c h3,
+.es-m-txt-c h4,
+.es-m-txt-c h5,
+.es-m-txt-c h6 {
+    text-align: center!important;
+  }
+
+  .es-m-txt-r,
+.es-m-txt-r h1,
+.es-m-txt-r h2,
+.es-m-txt-r h3,
+.es-m-txt-r h4,
+.es-m-txt-r h5,
+.es-m-txt-r h6 {
+    text-align: right!important;
+  }
+
+  .es-m-txt-j,
+.es-m-txt-j h1,
+.es-m-txt-j h2,
+.es-m-txt-j h3,
+.es-m-txt-j h4,
+.es-m-txt-j h5,
+.es-m-txt-j h6 {
+    text-align: justify!important;
+  }
+
+  .es-m-txt-l,
+.es-m-txt-l h1,
+.es-m-txt-l h2,
+.es-m-txt-l h3,
+.es-m-txt-l h4,
+.es-m-txt-l h5,
+.es-m-txt-l h6 {
+    text-align: left!important;
+  }
+
+  .es-m-txt-r img,
+.es-m-txt-c img,
+.es-m-txt-l img {
+    display: inline!important;
+  }
+
+  .es-m-txt-r .rollover:hover .rollover-second,
+.es-m-txt-c .rollover:hover .rollover-second,
+.es-m-txt-l .rollover:hover .rollover-second {
+    display: inline!important;
+  }
+
+  .es-m-txt-r .rollover span,
+.es-m-txt-c .rollover span,
+.es-m-txt-l .rollover span {
+    line-height: 0!important;
+    font-size: 0!important;
+  }
+
+  .es-spacer {
+    display: inline-table;
+  }
+
+  a.es-button,
+button.es-button {
+    font-size: 16px!important;
+    padding: 10px 20px 10px 20px!important;
+    line-height: 120%!important;
+  }
+
+  a.es-button,
+button.es-button,
+.es-button-border {
+    display: inline-block!important;
+  }
+
+  .es-m-fw,
+.es-m-fw.es-fw,
+.es-m-fw .es-button {
+    display: block!important;
+  }
+
+  .es-m-il,
+.es-m-il .es-button,
+.es-social,
+.es-social td,
+.es-menu {
+    display: inline-block!important;
+  }
+
+  .es-adaptive table,
+.es-left,
+.es-right {
+    width: 100%!important;
+  }
+
+  .es-content table,
+.es-header table,
+.es-footer table,
+.es-content,
+.es-footer,
+.es-header {
+    width: 100%!important;
+    max-width: 600px!important;
+  }
+
+  .adapt-img {
+    width: 100%!important;
+    height: auto!important;
+  }
+
+  .es-mobile-hidden,
+.es-hidden {
+    display: none!important;
+  }
+
+  .es-desk-hidden {
+    width: auto!important;
+    overflow: visible!important;
+    float: none!important;
+    max-height: inherit!important;
+    line-height: inherit!important;
+  }
+
+  tr.es-desk-hidden {
+    display: table-row!important;
+  }
+
+  table.es-desk-hidden {
+    display: table!important;
+  }
+
+  td.es-desk-menu-hidden {
+    display: table-cell!important;
+  }
+
+  .es-menu td {
+    width: 1%!important;
+  }
+
+  table.es-table-not-adapt,
+.esd-block-html table {
+    width: auto!important;
+  }
+
+  .h-auto {
+    height: auto!important;
+  }
+
+  .es-text-9643 .es-text-mobile-size-13,
+.es-text-9643 .es-text-mobile-size-13 * {
+    font-size: 13px!important;
+    line-height: 120%!important;
+  }
+
+  .es-text-5269 .es-text-mobile-size-13,
+.es-text-5269 .es-text-mobile-size-13 * {
+    font-size: 13px!important;
+    line-height: 120%!important;
+  }
+
+  .img-8095 {
+    width: 140px!important;
+  }
+}
+@media screen and (max-width:384px) {
+  .mail-message-content {
+    width: 414px!important;
+  }
+}
+</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="x-apple-disable-message-reformatting"/>
+<meta name="format-detection" content="telephone=no"/>
+<title>Pavel Romanov posted a new article on Node.js developers</title>
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/>
+<!--##custom-font-resource##-->
+<!--[if gte mso 16]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+
+
+
+
+<style>
+@media all and (max-width: 599px) {
+  .width600 {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  .hide-on-desktop {
+    display: none !important;
+  }
+}
+@media all and (max-width: 599px),
+only screen and (max-device-width: 599px) {
+  .main-container {
+    width: 100% !important;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .fluid-on-mobile {
+    width: 100% !important;
+    height: auto !important;
+    text-align: center;
+  }
+
+  .fluid-on-mobile img {
+    width: 100% !important;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+    overflow: hidden;
+  }
+}
+</style>
+
+
+<!--[if gte mso 9]>
+<style>
+
+.col {
+width: 100%;
+}
+
+.width600 {
+width: 600px;
+}
+
+.width170 {
+width: 170px;
+height: auto;
+}
+.width16 {
+width: 16px;
+height: auto;
+}
+.width40 {
+width: 40px;
+height: auto;
+}
+.width80 {
+width: 80px;
+height: auto;
+}
+.width48 {
+width: 48px;
+height: auto;
+}
+.width88 {
+width: 88px;
+height: auto;
+}
+.width32 {
+width: 32px;
+height: auto;
+}
+
+.hide-on-desktop {
+display: none;
+}
+
+.hide-on-desktop table {
+mso-hide: all;
+}
+
+.hide-on-desktop div {
+mso-hide: all;
+}
+
+.nounderline {text-decoration: none; }
+
+.mso-font-fix-arial { font-family: Arial, sans-serif; }
+.mso-font-fix-comic_sans_ms { font-family: 'Comic Sans MS', sans-serif; }
+.mso-font-fix-courier { font-family: Courier, monospace; }
+.mso-font-fix-georgia { font-family: Georgia, serif; }
+.mso-font-fix-segoe_ui { font-family: 'Segoe UI', sans-serif; }
+.mso-font-fix-tahoma { font-family: Tahoma, sans-serif; }
+.mso-font-fix-times_new_roman { font-family: 'Times New Roman', serif; }
+.mso-font-fix-trebuchet_ms { font-family: 'Trebuchet MS', sans-serif; }
+.mso-font-fix-verdana { font-family: Verdana, sans-serif; }
+
+</style>
+<![endif]-->
+
+</head>
+<body id="body" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-family: Arial, sans-serif; font-size: 0px; margin: 0; padding: 0; background-color: #f4f5f6;">
+<style>
+@media screen and (min-width: 600px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
+@media all and (max-width: 599px) {
+  .hide-on-mobile {
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+    overflow: hidden;
+  }
+
+  .main-container {
+    width: 100% !important;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .fluid-on-mobile {
+    width: 100% !important;
+    height: auto !important;
+    text-align: center;
+  }
+
+  .fluid-on-mobile img {
+    width: 100% !important;
+  }
+}
+</style>
+<div style="margin: 0; padding: 0; background-color: #f4f5f6;">
+<table height="100%" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="left" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td width="100%" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td align="center" width="100%" style="margin: 0; padding: 0; border-collapse: collapse;">
+<!--[if gte mso 9]><table width="600" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+<table class="width600 main-container" cellpadding="0" cellspacing="0" border="0" width="600" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px; max-width: 600px;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td width="100%" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;"><!--[if gte mso 9]>
+<v:rect stroked="false" style="width:600px;">
+<v:fill type="frame" origin="0.5,-0.5" position="0.5,-0.5" size="102pt,58pt" aspect="atleast" color="" src="https://https://daily-now-res.cloudinary.com/image/upload/v1672922175/notifications2/Squad%20New%20Post.chamaileon.io/5eeb3e710f43572cb5fe5071/5eeb3e710f43571ea5fe507b/1663239427158_rounded-background.png"/>
+<v:textbox style="mso-fit-shape-to-text:true;" inset="0,0,0,0">
+<![endif]-->
+<div style="margin: 0; padding: 0;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" class="mcol" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-image: url(&#39;https://daily-now-res.cloudinary.com/image/upload/v1672131700/emails/header.png&#39;); background-repeat: no-repeat; background-position: right top; background-size: 126px;" dir="rtl" background="https://daily-now-res.cloudinary.com/image/upload/v1672131700/emails/header.png">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; border-collapse: collapse; padding: 0; mso-cellspacing: 0in;">
+<!--[if gte mso 9]><table cellpadding="0" cellspacing="0" border="0" width="100%" dir="rtl"><tr><![endif]-->
+<!--[if gte mso 9]><td valign="top" style="padding:0;width:295px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="49.166666666666664%" class="col" align="right" dir="ltr" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; padding: 0;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="right" style="margin: 0; padding: 0; border-collapse: collapse;"><!--[if gte mso 9]><table width="16" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; max-width: 100%;" class="img-wrap">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="right" style="margin: 0; padding: 0; border-collapse: collapse;"><img src="https://daily-now-res.cloudinary.com/image/upload/v1672003091/notifications2/Password%20Reset%20Request/1664544169848_transparent.png" width="1" height="auto" alt="" border="0" style="-ms-interpolation-mode: bicubic; display: block; font-size: 14px; max-width: 100%; height: auto;" class="width16"/>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign="top" style="padding:0;width:0px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="0" height="24" class="col hide-on-desktop" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 0px; height: 24px;" align="right">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; line-height: 1px; padding: 0; font-size: 0px;"> </td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign="top" style="padding:0;width:305px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="50.833333333333336%" class="col" align="right" dir="ltr" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; padding: 0;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td width="24" style="margin: 0; padding: 0; border-collapse: collapse; line-height: 1px;"> </td>
+<td valign="top" align="left" style="margin: 0; padding: 0; border-collapse: collapse; padding-top: 20px; padding-bottom: 20px;"><!--[if gte mso 9]><table width="170" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; max-width: 100%;" class="img-wrap">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="left" style="margin: 0; padding: 0; border-collapse: collapse;"><a href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldi8iLCJpbnRlcm5hbCI6ImI5YzIwOTE2ZWU1NDhmZjkyOCIsImxpbmtfaWQiOjF9/9b381d7427c8274f499426811d65ff88a3abd012259fc32fa8e1618c640ffcbd" class="imglink" target="_blank" style="text-decoration: inherit;">
+<img src="https://daily-now-res.cloudinary.com/image/upload/v1672003091/notifications2/Password%20Reset%20Request/1594551705080_W_Logo.png" width="170" height="auto" border="0" style="-ms-interpolation-mode: bicubic; display: block; font-size: 14px; max-width: 100%; height: auto;" class="width170"/>
+</a>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]-->
+<!--[if gte mso 9]></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+</div>
+<!--[if gte mso 9]>
+</v:textbox>
+</v:rect>
+<![endif]-->
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td align="center" width="100%" style="margin: 0; padding: 0; border-collapse: collapse;">
+<!--[if gte mso 9]><table width="600" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+<table class="width600 main-container" cellpadding="0" cellspacing="0" border="0" width="600" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px; max-width: 600px;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td width="100%" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse; padding-top: 16px; padding-right: 24px; padding-left: 24px;"><table cellpadding="0" cellspacing="0" border="0" width="100%" class="mcol" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; border-collapse: collapse; padding: 0; mso-cellspacing: 0in;">
+<!--[if gte mso 9]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><![endif]-->
+<!--[if gte mso 9]><td valign="top" style="padding:0;width:47.84px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="8.666666666666666%" class="col" align="left" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; padding: 0;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="left" style="margin: 0; padding: 0; border-collapse: collapse;"><!--[if gte mso 9]><table width="40" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 40px; max-width: 100%; overflow: hidden; border-collapse: separate !important;" class="img-wrap">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="left" style="margin: 0; padding: 0; border-collapse: collapse;"><img src="https://res.cloudinary.com/daily-now/image/upload/s--TZIXRVEW--/f_auto/v1707292248/squads/8ccb5b29-1050-49ed-9fd4-d553890497b5" width="40" height="40" alt="" border="0" style="-ms-interpolation-mode: bicubic; display: block; font-size: 14px; max-width: 100%; border-radius: 50%;" class="width40"/>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign="top" style="padding:0;width:504.16px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="91.33333333333333%" class="col" align="left" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; padding: 0;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;"><div style="margin: 0; padding: 0; font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 18px; color: #131313; line-height: 40px; text-align: left;"><p style="padding: 0; margin: 0;"><span class="mso-font-fix-arial">Node.js developers</span></p></div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]-->
+<!--[if gte mso 9]></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td align="center" width="100%" style="margin: 0; padding: 0; border-collapse: collapse;">
+<!--[if gte mso 9]><table width="600" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+<table class="width600 main-container" cellpadding="0" cellspacing="0" border="0" width="600" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px; max-width: 600px;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td width="100%" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; border-collapse: collapse; padding: 16px;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#f8f9fc" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 16px; background-color: #f8f9fc; border-collapse: separate !important;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse; padding-top: 30px; padding-right: 16px; padding-bottom: 30px; padding-left: 16px;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="center" style="margin: 0; padding: 0; border-collapse: collapse; padding-bottom: 30px;"><!--[if gte mso 9]><table width="80" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 16px; max-width: 100%; overflow: hidden; border-collapse: separate !important;" class="img-wrap">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="center" style="margin: 0; padding: 0; border-collapse: collapse;"><img src="https://daily-now-res.cloudinary.com/image/upload/v1672922175/notifications2/Squad%20New%20Post/1672833716141_comment.png" width="80" height="auto" alt="" border="0" style="-ms-interpolation-mode: bicubic; display: block; font-size: 14px; max-width: 100%; height: auto;" class="width80"/>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="transparent" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: transparent;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;"><div style="margin: 0; padding: 0; font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 20px; color: #15161899; line-height: 24px; text-align: left;"><h2 style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 20px; color: #151618; font-weight: normal; line-height: 32px; mso-line-height: exactly; mso-text-raise: 6px; padding: 0; margin: 0; text-align: center;"><span class="mso-font-fix-arial"><strong>Pavel Romanov shared a new post on Node.js developers</strong></span></h2>
+</div>
+</td>
+</tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse; padding-top: 30px; padding-bottom: 30px;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="transparent" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border: 1px solid #A8B3CFA3; border-radius: 16px; background-color: transparent; border-collapse: separate !important;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; border-collapse: collapse; padding: 16px;"><table cellpadding="0" cellspacing="0" border="0" width="100%" class="mcol" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; border-collapse: collapse; padding: 0; mso-cellspacing: 0in;">
+<!--[if gte mso 9]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><![endif]-->
+<!--[if gte mso 9]><td valign="top" style="padding:0;width:47.80952380952381px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="9.523809523809524%" class="col" align="left" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; padding: 0;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="left" style="margin: 0; padding: 0; border-collapse: collapse;"><!--[if gte mso 9]><table width="48" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 12px; max-width: 100%; overflow: hidden; border-collapse: separate !important;" class="img-wrap">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="left" style="margin: 0; padding: 0; border-collapse: collapse;"><img src="https://res.cloudinary.com/daily-now/image/upload/s--6Q2lnUNa--/f_auto/v1715581987/avatars/avatar_gKJMx9kKXdRpYViAnTF4H" width="48" height="auto" alt="" border="0" style="-ms-interpolation-mode: bicubic; display: block; font-size: 14px; max-width: 100%; height: auto; border-radius: 12px;" class="width48"/>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign="top" style="padding:0;width:15.936507936507935px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="3.1746031746031744%" height="16" class="col" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 15.936507936507935px; height: 16px;" align="left">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; line-height: 1px; padding: 0; font-size: 0px;"> </td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign="top" style="padding:0;width:436.26190476190476px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="86.9047619047619%" class="col" align="left" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; padding: 0;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;"><div style="margin: 0; padding: 0; font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16px; color: #131313; line-height: 25px; text-align: left;"><p style="padding: 0; margin: 0;"><span class="mso-font-fix-arial"><strong>Pavel Romanov</strong></span><br/><span class="mso-font-fix-arial">
+Reputation: 150</span></p></div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]-->
+<!--[if gte mso 9]></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse; padding-top: 16px;"><div style="margin: 0; padding: 0; font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 18px; color: #131313; line-height: 25px; text-align: left;"><p style="padding: 0; margin: 0;"><span class="mso-font-fix-arial"></span></p></div>
+</td>
+</tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td style="margin: 0; padding: 0; border-collapse: collapse; padding-top: 32px; padding-bottom: 16px;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid #e5e8ef;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td style="margin: 0; padding: 0; border-collapse: collapse; font-size: 0px; line-height: 0; mso-line-height-rule: exactly;"> 
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse; padding-top: 16px; padding-bottom: 16px;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 16px; border-collapse: separate !important;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;"><table cellpadding="0" cellspacing="0" border="0" width="100%" class="mcol" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; border-collapse: collapse; padding: 0; mso-cellspacing: 0in;">
+<!--[if gte mso 9]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><![endif]-->
+<!--[if gte mso 9]><td valign="top" style="padding:0;width:87.65079365079364px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="17.46031746031746%" class="col" align="left" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; padding: 0;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="center" style="margin: 0; padding: 0; border-collapse: collapse;"><!--[if gte mso 9]><table width="88" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 8px; max-width: 100%; overflow: hidden; border-collapse: separate !important;" class="fluid-on-mobile img-wrap">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="center" style="margin: 0; padding: 0; border-collapse: collapse;"><img src="https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/ec74d89c9def5c93b54154f6b6596a91?_a=AQAEuiZ" width="88" height="auto" alt="" border="0" style="-ms-interpolation-mode: bicubic; display: block; font-size: 14px; max-width: 100%; height: auto; border-radius: 12px;" class="width88"/>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign="top" style="padding:0;width:23.904761904761905px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="4.761904761904762%" height="24" class="col" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 23.904761904761905px; height: 24px;" align="left">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; line-height: 1px; padding: 0; font-size: 0px;"> </td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]--><!--[if gte mso 9]><td valign="top" style="padding:0;width:388.4523809523809px;"><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="77.38095238095238%" class="col" align="left" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" width="100%" style="margin: 0; border-collapse: collapse; padding: 0;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;"><div style="margin: 0; padding: 0; font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16px; color: #131313; line-height: 25px; text-align: left;"><p style="padding: 0; margin: 0;"><span class="mso-font-fix-arial">Garbage collection and closures</span></p></div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td><![endif]-->
+<!--[if gte mso 9]></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" align="center" style="margin: 0; padding: 0; border-collapse: collapse;">
+<!--[if !mso]><!-- -->
+<a href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldi9wb3N0cy9MVGpyNHJaaUw_dXRtX3NvdXJjZT1ub3RpZmljYXRpb25cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPXNxdWFkX3Bvc3RfYWRkZWQiLCJpbnRlcm5hbCI6ImI5YzIwOTE2ZWU1NDhmZjkyOCIsImxpbmtfaWQiOjE0fQ/1dd732eb3ffe69bbd053a96bc6bcae7323c2c07f3bb6bf69c364edbc19d1fa44" target="_blank" style="display: inline-block; text-decoration: none;">
+<span>
+<table cellpadding="0" cellspacing="0" border="0" bgcolor="#a81ce4" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 12px; background-color: #a81ce4; border-collapse: separate !important;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td align="center" style="margin: 0; padding: 0; border-collapse: collapse; padding-top: 16px; padding-right: 40px; padding-bottom: 16px; padding-left: 40px;">
+<span style="color:#ffffff !important;font-family:Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px;mso-line-height:exactly;line-height:24px;mso-text-raise:4px;letter-spacing: normal;">
+<font style="color:#ffffff;" class="button">
+<span><strong>Discuss with Pavel Romanov</strong></span>
+</font>
+</span>
+</td>
+</tr>
+</tbody></table>
+</span>
+</a>
+<!--<![endif]-->
+<div style="margin: 0; padding: 0; display: none; mso-hide: none;">
+<table cellpadding="0" cellspacing="0" border="0" bgcolor="#a81ce4" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-radius: 12px; background-color: #a81ce4; border-collapse: separate !important;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td align="center" style="margin: 0; padding: 0; border-collapse: collapse; padding-top: 16px; padding-right: 40px; padding-bottom: 16px; padding-left: 40px;">
+<a href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldi9wb3N0cy9MVGpyNHJaaUw_dXRtX3NvdXJjZT1ub3RpZmljYXRpb25cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPXNxdWFkX3Bvc3RfYWRkZWQiLCJpbnRlcm5hbCI6ImI5YzIwOTE2ZWU1NDhmZjkyOCIsImxpbmtfaWQiOjE0fQ/1dd732eb3ffe69bbd053a96bc6bcae7323c2c07f3bb6bf69c364edbc19d1fa44" target="_blank" style="font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 16px; mso-line-height: exactly; line-height: 24px; mso-text-raise: 4px; letter-spacing: normal; text-decoration: none; text-align: center; color: #ffffff !important;">
+<span style="color:#ffffff !important;font-family:Lato, Helvetica Neue, Helvetica, Arial, sans-serif;font-size:16px;mso-line-height:exactly;line-height:24px;mso-text-raise:4px;letter-spacing: normal;">
+<font style="color:#ffffff;" class="button">
+<span><strong>Discuss with Pavel Romanov</strong></span>
+</font>
+</span>
+</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td align="center" width="100%" style="margin: 0; padding: 0; border-collapse: collapse;">
+<!--[if gte mso 9]><table width="600" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+<table class="width600 main-container" cellpadding="0" cellspacing="0" border="0" width="600" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px; max-width: 600px;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td width="100%" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td valign="top" style="margin: 0; padding: 0; border-collapse: collapse;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td style="margin: 0; border-collapse: collapse; padding: 16px;">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin: 0; padding: 0; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid #CFD6E600;">
+<tbody><tr style="margin: 0; padding: 0;">
+<td style="margin: 0; padding: 0; border-collapse: collapse; font-size: 0px; line-height: 0; mso-line-height-rule: exactly;"> 
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<!--[if gte mso 9]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+
+<div dir="ltr" class="es-wrapper-color" lang="en" style="margin: 0; padding: 0; background-color: #F6F6F6;"> <table width="100%" cellspacing="0" cellpadding="0" class="es-wrapper" role="none" style="margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; padding: 0; Margin: 0; width: 100%; height: 100%; background-repeat: repeat; background-position: center top; background-color: #F6F6F6;" height="100%" bgcolor="#F6F6F6"><tbody><tr style="margin: 0; padding: 0;"><td valign="top" class="es-m-p20b es-m-p8l es-m-p8r" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0;"><table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="margin: 0; padding: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; width: 100%; table-layout: fixed !important;" width="100%"><tbody><tr style="margin: 0; padding: 0;"> 
+    <td align="center" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0;"><table align="center" cellpadding="0" cellspacing="0" class="es-footer-body" style="margin: 0; padding: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; background-color: transparent; width: 600px;" role="none" width="600" bgcolor="transparent"><tbody><tr style="margin: 0; padding: 0;"><td align="left" style="margin: 0; padding: 0; border-collapse: collapse; Margin: 0; padding-top: 24px; padding-right: 32px; padding-bottom: 24px; padding-left: 32px;"><table cellpadding="0" cellspacing="0" width="100%" align="right" class="es-right" role="none" style="margin: 0; padding: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px; float: right;"><tbody><tr style="margin: 0; padding: 0;">
+      <td align="left" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0; width: 536px;" width="536"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="margin: 0; padding: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px;"><tbody><tr style="margin: 0; padding: 0;">
+    <td align="center" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0; padding-bottom: 16px; font-size: 0;"><table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" class="es-spacer" role="presentation" style="margin: 0; padding: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px;"><tbody><tr style="margin: 0; padding: 0;"><td style="border-collapse: collapse; padding: 0; Margin: 0; border-bottom: 1px solid #CFD6E6; background: none; height: 1px; width: 100%; margin: 0px;" width="100%" height="1"></td> </tr></tbody></table></td></tr> <tr style="margin: 0; padding: 0;">
+    <td align="center" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0;"><p align="center" style="margin: 0; padding: 0; Margin: 0; mso-line-height-rule: exactly; font-family: helvetica, &#39;helvetica neue&#39;, arial, verdana, sans-serif; letter-spacing: 0px; color: #686E78; font-size: 14px; margin-bottom: 4px; line-height: 28px !important;"><strong><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldi9wb3N0cyIsImludGVybmFsIjoiYjljMjA5MTZlZTU0OGZmOTI4IiwibGlua19pZCI6MTUwfQ/d6a818faf6fd28244eb6a654758876eae8d9fe4017db415f3f332ee2363ceb10" style="mso-line-height-rule: exactly; text-decoration: none; color: #153BE0; font-size: 14px; line-height: 28px !important;">Explore</a></strong>   <span style="color:#CFD6E6">|</span>   <strong href="https://docs.daily.dev/"><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldi9kaXNjdXNzZWQiLCJpbnRlcm5hbCI6ImI5YzIwOTE2ZWU1NDhmZjkyOCIsImxpbmtfaWQiOjI3fQ/831751dbd31f9d9777d75c2dde97810a46404e0e5909f4f133c69595986f497b" style="mso-line-height-rule: exactly; text-decoration: none; color: #153BE0; font-size: 14px; line-height: 28px !important;">Discussions</a></strong>
+  <span style="color:#CFD6E6">|</span>   <strong><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldi90YWdzIiwiaW50ZXJuYWwiOiJiOWMyMDkxNmVlNTQ4ZmY5MjgiLCJsaW5rX2lkIjoxNTF9/27959b6f3c15f858ebfdb8f32b2d12cbf4cd24370f47d6b432089b87a52e64cd" style="mso-line-height-rule: exactly; text-decoration: none; color: #153BE0; font-size: 14px; line-height: 28px !important;">Tags</a>   </strong><span style="color:#CFD6E6">|</span><strong>   <a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldi9zb3VyY2VzIiwiaW50ZXJuYWwiOiJiOWMyMDkxNmVlNTQ4ZmY5MjgiLCJsaW5rX2lkIjoxMjN9/ef190c7147c3cd757edd7ee3ee3fe4daf6d5ea058151e47c4864c99db80d3705" style="mso-line-height-rule: exactly; text-decoration: none; color: #153BE0; font-size: 14px; line-height: 28px !important;">Sources</a>   </strong><span style="color:#CFD6E6">|</span><strong>   <a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldi91c2VycyIsImludGVybmFsIjoiYjljMjA5MTZlZTU0OGZmOTI4IiwibGlua19pZCI6MTUyfQ/fee1ecda290c5ba1e7607982ae9e78393be9428ded0f8acfc3bb25a526e5fb4e" style="mso-line-height-rule: exactly; text-decoration: none; color: #153BE0; font-size: 14px; line-height: 28px !important;">Leaderboard</a></strong></p>
+     </td></tr><tr style="margin: 0; padding: 0;"><td align="center" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0; padding-bottom: 16px; padding-top: 16px; font-size: 0;"><table border="0" width="100%" height="100%" cellpadding="0" cellspacing="0" class="es-spacer" role="presentation" style="margin: 0; padding: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px;"><tbody><tr style="margin: 0; padding: 0;"><td style="border-collapse: collapse; padding: 0; Margin: 0; border-bottom: 1px solid #CFD6E6; background: none; height: 1px; width: 100%; margin: 0px;" width="100%" height="1"></td></tr></tbody></table></td></tr> <tr style="margin: 0; padding: 0;"><td align="center" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0; padding-bottom: 16px; padding-top: 16px; font-size: 0;"><table cellpadding="0" cellspacing="0" class="es-table-not-adapt es-social" role="presentation" style="margin: 0; padding: 0;
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; border-spacing: 0px;"><tbody><tr style="margin: 0; padding: 0;">
+    <td align="center" valign="top" class="es-m-p16r" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0; padding-right: 24px;"><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vdHdpdHRlci5jb20vZGFpbHlkb3RkZXYiLCJpbnRlcm5hbCI6ImI5YzIwOTE2ZWU1NDhmZjkyOCIsImxpbmtfaWQiOjV9/3179af8e360c983ea3661be11bf69a147eb8b36b5d6acb40ca1bc94e26359537" style="mso-line-height-rule: exactly; text-decoration: underline; color: #153BE0; font-size: 14px;"><img title="X.com" src="https://res.cloudinary.com/daily-now/image/upload/s--1ZicrDYa--/f_auto/v1717850422/public/x-circle-black" alt="X" height="32" width="32" style="-ms-interpolation-mode: bicubic; display: block; font-size: 16px; border: 0; outline: none; text-decoration: none;"/></a></td> <td align="center" valign="top" class="es-m-p16r" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0; padding-right: 24px;"><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2MvZGFpbHlkZXYiLCJpbnRlcm5hbCI6ImI5YzIwOTE2ZWU1NDhmZjkyOCIsImxpbmtfaWQiOjZ9/a6020b65fe4c55dd867845f033a6e149992d89f8c9b6d58bdc75405560997667" style="mso-line-height-rule: exactly; text-decoration: underline; color: #153BE0; font-size: 14px;"><img title="Youtube" src="https://res.cloudinary.com/daily-now/image/upload/s--1ZicrDYa--/f_auto/v1717850422/public/youtube-circle-black" alt="Yt" height="32" width="32" style="-ms-interpolation-mode: bicubic; display: block; font-size: 16px; border: 0; outline: none; text-decoration: none;"/></a></td>
+    <td align="center" valign="top" class="es-m-p16r" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0; padding-right: 24px;"><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lmluc3RhZ3JhbS5jb20vZGFpbHlkb3RkZXYvIiwiaW50ZXJuYWwiOiJiOWMyMDkxNmVlNTQ4ZmY5MjgiLCJsaW5rX2lkIjo3fQ/8e1172c81ce8f462d9a2f586f467b077978c0b4b74e7e18ac808ef414a787ac8" style="mso-line-height-rule: exactly; text-decoration: underline; color: #153BE0; font-size: 14px;"><img title="Instagram" src="https://res.cloudinary.com/daily-now/image/upload/s--1ZicrDYa--/f_auto/v1717850422/public/instagram-circle-black" alt="Inst" height="32" width="32" style="-ms-interpolation-mode: bicubic; display: block; font-size: 16px; border: 0; outline: none; text-decoration: none;"/></a></td> <td align="center" valign="top" class="es-m-p16r" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0; padding-right: 24px;"><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LnRpa3Rvay5jb20vQGRhaWx5ZG90ZGV2IiwiaW50ZXJuYWwiOiJiOWMyMDkxNmVlNTQ4ZmY5MjgiLCJsaW5rX2lkIjo4fQ/7502d2ff55372bec6a95e612c16d642ac46ce001a8f03b155b5bc7c5356e22a0" style="mso-line-height-rule: exactly; text-decoration: underline; color: #153BE0; font-size:
+14px;"><img title="TikTok" src="https://res.cloudinary.com/daily-now/image/upload/s--1ZicrDYa--/f_auto/v1717850422/public/tiktok-circle-black" alt="Tt" height="32" width="32" style="-ms-interpolation-mode: bicubic; display: block; font-size: 16px; border: 0; outline: none; text-decoration: none;"/></a></td>
+    <td align="center" valign="top" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0;"><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vZ2l0aHViLmNvbS9kYWlseWRvdGRldi9kYWlseSIsImludGVybmFsIjoiYjljMjA5MTZlZTU0OGZmOTI4IiwibGlua19pZCI6OX0/9e44252b63fd0bbf8b662243e18dfea007a1c0dec74510f30ffa6b7078d64fb7" style="mso-line-height-rule: exactly; text-decoration: underline; color: #153BE0; font-size: 14px;"><img title="GitHub" src="https://res.cloudinary.com/daily-now/image/upload/s--1ZicrDYa--/f_auto/v1717850422/public/github-circle-black" alt="GitHub" height="32" width="32" style="-ms-interpolation-mode: bicubic; display: block; font-size: 16px; border: 0; outline: none; text-decoration: none;"/></a></td></tr></tbody></table></td></tr> <tr style="margin: 0; padding: 0;"><td align="center" class="es-text-9643" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0;">
+      <br/><p style="margin: 0; padding: 0; Margin: 0; mso-line-height-rule: exactly; font-family: helvetica, &#39;helvetica neue&#39;, arial, verdana, sans-serif; letter-spacing: 0px; color: #686e78; font-size: 14px; margin-bottom: 4px; line-height: 20px !important;"><span class="mso-font-fix-arial"><strong>Joke of the day</strong> 🙃</span></p>
+      <p style="margin: 0; padding: 0; Margin: 0; mso-line-height-rule: exactly; font-family: helvetica, &#39;helvetica neue&#39;, arial, verdana, sans-serif; letter-spacing: 0px; color: #686e78; font-size: 14px; margin-bottom: 4px; line-height: 20px !important;"><span class="mso-font-fix-arial">
+      
+        
+        
+        
+        
+        
+        How many software engineers does it take to change a light bulb? None, that&#39;s a hardware problem.
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </span></p>
+        
+      <br/><p align="center" style="margin: 0; padding: 0; Margin: 0; mso-line-height-rule: exactly; font-family: helvetica, &#39;helvetica neue&#39;, arial, verdana, sans-serif; letter-spacing: 0px; color: #686e78; font-size: 14px; margin-bottom: 4px; line-height: 25px !important;"><strong>​ </strong>This email was intended for <strong>Ahmed ayob Abdo </strong>(wezonaser50@gmail.com)</p> 
+     <p align="center" style="margin: 0; padding: 0; Margin: 0; mso-line-height-rule: exactly; font-family: helvetica, &#39;helvetica neue&#39;, arial, verdana, sans-serif; letter-spacing: 0px; color: #686e78; font-size: 14px; margin-bottom: 4px; line-height: 25px !important;">You can upda<span style="font-size:13px">​</span><span class="es-text-mobile-size-13">​</span>te your profile settings to change <a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldi9hY2NvdW50L25vdGlmaWNhdGlvbnMiLCJpbnRlcm5hbCI6ImI5YzIwOTE2ZWU1NDhmZjkyOCIsImxpbmtfaWQiOjEwfQ/8a198573dee750d4714838548de959019b678113f989782c896a495f41d36a71" style="mso-line-height-rule: exactly; text-decoration: underline; color: #2556ED; font-size: 14px; font-family: helvetica, &#39;helvetica neue&#39;, arial, verdana, sans-serif; line-height: 25px !important;">notifications</a>, <a href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldi9hY2NvdW50L3Byb2ZpbGUiLCJpbnRlcm5hbCI6ImI5YzIwOTE2ZWU1NDhmZjkyOCIsImxpbmtfaWQiOjE1M30/75c43ef0df2b6455938db5386a10c7bad31c6973db9e930128fa8510f6496084" target="_blank" style="mso-line-height-rule: exactly; text-decoration: underline; color: #153BE0; font-size: 14px;">account details</a> or <a target="_blank" href="https://e.customeriomail.com/manage_subscription_preferences/RLnCCQUAAZEWozoa6RpdHwbxGRv5ww==" style="mso-line-height-rule: exactly; text-decoration: underline; color: #2556ED; font-size: 14px; line-height: 25px !important;">unsubscribe</a> </p>
+     </td></tr><tr style="margin: 0; padding: 0;"><td align="center" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0; padding-bottom: 16px; padding-top: 11px; font-size: 0;"><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vYXBwLmRhaWx5LmRldiIsImludGVybmFsIjoiYjljMjA5MTZlZTU0OGZmOTI4IiwibGlua19pZCI6MjZ9/ce7c6802c6af58f3d51ce85dc8921b96e481d5a0d3dc416e2c0cf8ee0a29a0e4" style="mso-line-height-rule: exactly; text-decoration: underline; color: #153BE0; font-size: 14px;"><img src="https://res.cloudinary.com/daily-now/image/upload/s--fpb2v9Xc--/f_auto/v1720703943/public/daily_dev_logo" alt="" width="140" class="img-8095" height="37" style="-ms-interpolation-mode: bicubic; display: block; font-size: 16px; border: 0; outline: none; text-decoration: none;"/></a></td></tr><tr style="margin: 0; padding: 0;"><td align="center" style="margin: 0; border-collapse: collapse; padding: 0; Margin: 0;"><p align="center" style="margin: 0; padding: 0; Margin: 0; mso-line-height-rule: exactly; font-family: helvetica, &#39;helvetica neue&#39;, arial, verdana, sans-serif; letter-spacing:
+0px; color: #686e78; font-size: 14px; margin-bottom: 4px; line-height: 25px !important;">Daily Dev Ltd., 9 Derech HaTikva Ganei Tikva, Israel 5591252<br/>We value your opinion and welcome any ideas that can help us improve daily.dev.</p><p align="center" style="margin: 0; padding: 0; Margin: 0; mso-line-height-rule: exactly; font-family: helvetica, &#39;helvetica neue&#39;, arial, verdana, sans-serif; letter-spacing: 0px; color: #686e78; font-size: 14px; margin-bottom: 4px; line-height: 25px !important;"><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vZGFpbHkuZGV2L2ZlZWRiYWNrIiwiaW50ZXJuYWwiOiJiOWMyMDkxNmVlNTQ4ZmY5MjgiLCJsaW5rX2lkIjozfQ/620270a8fc2a0ad7dd9cbce729b2786cedc086e8b84e7a1c7cba2c57769e2380" style="mso-line-height-rule: exactly; text-decoration: underline; color: #2556ED; font-size: 14px; line-height: 25px !important;">Feedback</a>   <span style="color:#CFD6E6">|</span>   <span href="https://docs.daily.dev/"><a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vZG9jcy5kYWlseS5kZXYvIiwiaW50ZXJuYWwiOiJiOWMyMDkxNmVlNTQ4ZmY5MjgiLCJsaW5rX2lkIjoxNTR9/0c538a5820e41da5fcfd5aab515911511be7a8b89f6a94ab80a54c133fa98f54" style="mso-line-height-rule: exactly; text-decoration: underline; color: #153BE0; font-size:
+14px;">Docs</a></span>   <span style="color:#CFD6E6">|</span>   <a target="_blank" href="https://e.customeriomail.com/e/c/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09IiwiaHJlZiI6Imh0dHBzOi8vZGFpbHkuZGV2L3ByaXZhY3kiLCJpbnRlcm5hbCI6ImI5YzIwOTE2ZWU1NDhmZjkyOCIsImxpbmtfaWQiOjE1NX0/f5d5d5b58aee393bfbbd94b8681e77f834a293a48da549e33fb8798b7e163460" style="mso-line-height-rule: exactly; text-decoration: underline; color: #2556ED; font-size: 14px; line-height: 25px !important;">Privacy</a></p></td> </tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>
+
+<img src="https://e.customeriomail.com/e/o/eyJlbWFpbF9pZCI6IlJMbkNDUVVBQVpFV296b2E2UnBkSHdieEdSdjV3dz09In0=" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important; display: none !important;" alt=""/></body></html>

@@ -57,7 +57,7 @@ describe("EmailBuilder", () => {
 
   it("should set data", () => {
     emailBuilder.setData("<p>Hello, world!</p>");
-    expect(emailBuilder.data).toBe("<p>Hello, world!</p>");
+    expect(emailBuilder.messageBody).toBe("<p>Hello, world!</p>");
   });
 
   it("should set snippet", () => {
