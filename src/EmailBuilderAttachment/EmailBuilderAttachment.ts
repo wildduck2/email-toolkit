@@ -8,6 +8,13 @@ export class EmailBuilderAttachment implements EmailBuilderAttachmentClass {
   boundary?: string | undefined = "boundary";
   constructor() {}
 
+  public addAttachment(attachment: AttachmentType) {
+    if (!this.attachments) {
+      this.attachments = [];
+    }
+    this.attachments.push(attachment);
+  }
+
   public createAttachmentContent() {
     return this.attachments?.flatMap((attachment) => {
       return [

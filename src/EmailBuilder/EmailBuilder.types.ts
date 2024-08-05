@@ -1,32 +1,9 @@
-import type { z } from "zod";
-import { HeadersTypeSchema } from "../zod/zod";
 import type { ContentTransferEncoding } from "../index.types";
 import type { MIMETypes } from "../zod/zod.types";
 
 export type MIMEType = typeof MIMETypes;
 
-export interface EmailBuilderClass {
-  headers: HeadersType | null;
-  snippet: string;
-  labels: Uppercase<string>[];
-  MimeType: string;
-  applicationSignature: ApplicationSignature | null;
-  setHeaders(headers: HeadersType): this;
-  setSnippet(snippet: string): this;
-  setLabels(labels: string[]): this;
-  setData(data: string): this;
-  setApplicationSignature(applicationSignature: ApplicationSignature): this;
-  setMimeType(mimeType: string): this;
-  addMessage({
-    data,
-    charset,
-    headers,
-    encoding,
-    contentType,
-  }: AddMessageType): this;
-  asRaw(): string;
-  asEncoded(): string;
-}
+export interface EmailBuilderClass {}
 
 export interface ApplicationSignature {
   name: string;

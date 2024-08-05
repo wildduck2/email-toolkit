@@ -14,3 +14,6 @@ export const CharsetType = [
   "latin1",
 ] as const;
 export const MIMETypes = ["text/html", "text/plain"] as const;
+export type ContentDispositionType =
+  `${AttachmentTypeType}; filename="${string}"`;
+export type AttachmentTypeType = "inline" | "attachment" | "form-data";

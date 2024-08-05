@@ -1,11 +1,12 @@
 import { Base64 } from "./Base64";
 import { EmailBuilderHeader } from "./EmailBiulderHeader/EmailBuilderHeader";
+import { EmailBuilder } from "./EmailBuilder";
 
 export * from "./Base64";
 export * from "./Error";
 export * from "./EmailBuilder";
 
-import { EmailBuilder } from "./EmailBuilder";
+import { EmailBuilderAttachment } from "./EmailBuilderAttachment/EmailBuilderAttachment";
 
 const header = new EmailBuilderHeader();
 header
@@ -20,24 +21,24 @@ header
   .setContentType("text/html")
   .setCharset("utf8");
 
-console.log(header.getHeaders());
+const attachment = new EmailBuilderAttachment();
+attachment.addAttachment({
+  headers: {
+    "Mime-Type": "text/html",
+    "Content-Transfer-Encoding": "base64",
+    "Content-Disposition": 'attachment; filename="test.txt"',
+  },
+  size: 1234,
+  filename: "test.txt",
+  mimeType: "text/plain",
+  attachmentId: "1234",
+  attachmentContent: Base64.encodeToBase64("test"),
+});
 
-// const foo = new EmailBuilder()
-//   .addMessage({
-//     headers: {
-//       Date: "Wed, 31 Jul 2024 13:39:10 GMT",
-//       From: "wildduck2/email-builder <email-builder@noreply.github.com>",
-//       To: "Ahmed Ayob <notifications@github.com>",
-//       Cc: "Ahmed Ayob <notifications@github.com>",
-//       Bcc: "Ahmed Ayob <notifications@github.com>",
-//       "Message-Id": "19108cbf60f51f1a",
-//       Subject: "RE: [wildduck/email-builder] Run failed: CI - main (b682de3)",
-//       "In-Reply-To": "19108cbf60f51f1a",
-//       "Content-Type": "text/html",
-//       "Content-Transfer-Encoding": "base64",
-//     },
-//     data: "<p>asdf</p>",
-//   })
-//   .asRaw();
-//
-// console.log(foo);
+// console.log(header.attachments);
+
+const email = new EmailBuilder();
+email.messagebody = "this is message body";
+
+const finalEmail = email.getRawMessage(header.headers, attachment.attachments);
+console.log(finalEmail);

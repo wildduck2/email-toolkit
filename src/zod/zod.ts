@@ -23,10 +23,18 @@ export const HeadersTypeSchema = z.object({
   Charset: CharsetTypeSchema.optional(),
 });
 
-export const LabelsTypeSchema = z.array(z.string().toUpperCase());
+const ContentDispositionType = z.string().refine(
+  (val) => {
+    const regex = /^(inline|attachment|form-data); filename="[^"]+"$/;
+    return regex.test(val);
+  },
+  {
+    message: "Invalid Content-Disposition format",
+  }
+);
 
 export const AttachmentHeaderSchema = z.object({
   "Mime-Type": ContentTypeSchema.optional(),
   "Content-Transfer-Encoding": ContentTransferEncodingSchema.optional(),
-  "Content-Disposition": z.string().optional(),
+  "Content-Disposition": ContentDispositionType.optional(),
 });
