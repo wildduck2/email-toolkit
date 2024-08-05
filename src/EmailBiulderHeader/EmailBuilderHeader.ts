@@ -69,17 +69,17 @@ export class EmailBuilderHeader
     return this;
   }
 
-  setInReplyTo(InReplyTo: string): this {
+  public setInReplyTo(InReplyTo: string): this {
     this.headers["In-Reply-To"] = InReplyTo;
     return this;
   }
 
-  setMIMEVersion(MIMEVersion: string): this {
+  public setMIMEVersion(MIMEVersion: string): this {
     this.headers["MIME-Version"] = MIMEVersion;
     return this;
   }
 
-  setContentTransferEncoding(
+  public setContentTransferEncoding(
     ContentTransferEncoding: ContentTransferEncoding
   ): this {
     this.headers["Content-Transfer-Encoding"] = ContentTransferEncoding;

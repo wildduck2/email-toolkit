@@ -24,6 +24,9 @@ export const HeadersTypeSchema = z.object({
 });
 
 export const LabelsTypeSchema = z.array(z.string().toUpperCase());
-// "Mime-Type": ContentTypeSchema.optional(),
-// "Content-Disposition": z.string().optional(),
-// "Content-ID": z.string().optional(),
+
+export const AttachmentHeaderSchema = z.object({
+  "Mime-Type": ContentTypeSchema.optional(),
+  "Content-Transfer-Encoding": ContentTransferEncodingSchema.optional(),
+  "Content-Disposition": z.string().optional(),
+});

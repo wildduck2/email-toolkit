@@ -2,20 +2,32 @@ import type { z } from "zod";
 import type { MIMEType } from "../EmailBuilder";
 import type { HeadersTypeSchema, CharsetType } from "../zod";
 import type { ContentTransferEncoding } from "../index.types";
-import type { CharacterEncoding } from "crypto";
 
-export interface EmailBuilderHeaderClass {
+export declare class EmailBuilderHeaderClass {
   headers: HeadersType;
-  getHeaders(): HeadersType;
+  constructor();
+  public getHeaders(): HeadersType;
+  public setFrom(From: ValueType): this;
+  public setTo(To: ValueType): this;
+  public setCc(Cc: ValueType): this;
+  public setBcc(Bcc: ValueType): this;
+  public setDate(Date: string): this;
+  public setSubject(Subject: string): this;
+  public setInReplyTo(InReplyTo: string): this;
+  public setMIMEVersion(MIMEVersion: string): this;
+  public setContentTransferEncoding(
+    ContentTransferEncoding: ContentTransferEncoding
+  ): this;
+  public setContentType(ContentType: TupleUnion<MIMEType>): this;
+  public setCharset(Charset: TupleUnion<typeof CharsetType>): this;
 }
+
 export type ValueType = `${string} <${string}@${string}.${string}>`;
-
 export type TupleUnion<T extends readonly unknown[]> = T[number];
-
-type HeaderskeyNameType = z.infer<typeof HeadersTypeSchema>;
+export type HeaderskeyNameType = z.infer<typeof HeadersTypeSchema>;
 export type HeadernameType = keyof HeaderskeyNameType;
 
-type ExcludedHeadernameType = Exclude<
+export type ExcludedHeadernameType = Exclude<
   HeadernameType,
   | "From"
   | "To"
