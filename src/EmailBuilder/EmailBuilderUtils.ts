@@ -24,9 +24,3 @@ export class EmailBuilderUtils {
     ];
   }
 }
-
-export type GetSignatureType = {
-  from: string;
-  url: string;
-  name: string;
-};

@@ -34,7 +34,7 @@ const ContentDispositionType = z.string().refine(
 );
 
 export const AttachmentHeaderSchema = z.object({
-  "Mime-Type": ContentTypeSchema.optional(),
+  "Content-Type": ContentTypeSchema.optional(),
   "Content-Transfer-Encoding": ContentTransferEncodingSchema.optional(),
   "Content-Disposition": ContentDispositionType.optional(),
 });

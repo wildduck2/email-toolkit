@@ -20,7 +20,7 @@ export class EmailBuilderAttachment implements EmailBuilderAttachmentClass {
       return [
         ``,
         `--${this.boundary}`,
-        `Content-Type: ${attachment.headers?.["Content-Type"]}`,
+        `Content-Type: ${attachment.headers?.["Mime-Type"]}`,
         `Content-Transfer-Encoding: ${attachment.headers?.["Content-Transfer-Encoding"]}`,
         `Content-Disposition: attachment; filename="${attachment.filename}"`,
         ``,

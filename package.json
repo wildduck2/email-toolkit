@@ -40,12 +40,10 @@
     "devDependencies": {
         "@changesets/cli": "^2.27.7",
         "@types/node": "^22.0.0",
+        "date-fns": "^3.6.0",
         "tsup": "^8.2.3",
         "typescript": "^5.5.4",
         "vitest": "^2.0.4",
         "zod": "^3.23.8"
-    },
-    "dependencies": {
-        "eml-parser": "^2.0.3"
     }
 }

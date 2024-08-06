@@ -1,7 +1,11 @@
 import type { z } from "zod";
-import type { HeadersType, TupleUnion } from "../EmailBiulderHeader";
+import type { TupleUnion } from "../EmailBiulderHeader";
 import type { MIMEType } from "../EmailBuilder";
-import type { AttachmentHeaderSchema, ContentDispositionType } from "../zod";
+import type {
+  AttachmentContentType,
+  AttachmentHeaderSchema,
+  ContentDispositionType,
+} from "../zod";
 
 export declare class EmailBuilderAttachmentClass {
   attachments: AttachmentType[] | undefined;
@@ -11,8 +15,9 @@ export declare class EmailBuilderAttachmentClass {
 
 export type AttachmentHeaderType = Exclude<
   z.infer<typeof AttachmentHeaderSchema>,
-  "Content-Disposition"
+  "Content-Type" | "Content-Disposition"
 > & {
+  "Content-Type": AttachmentContentType;
   "Content-Disposition": ContentDispositionType;
 };
 

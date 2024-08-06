@@ -1,6 +1,12 @@
 import type { ContentTransferEncoding } from "../index.types";
 import type { MIMETypes } from "../zod/zod.types";
 
+export type GetSignatureType = {
+  from: string | undefined;
+  url: string | undefined;
+  name: string | undefined;
+};
+
 export type MIMEType = typeof MIMETypes;
 
 export interface EmailBuilderClass {}
