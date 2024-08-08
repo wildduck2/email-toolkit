@@ -20,7 +20,7 @@ export class EmailBuilderAttachment implements EmailBuilderAttachmentClass {
       return [
         ``,
         `--${this.boundary}`,
-        `Content-Type: ${attachment.headers?.["Mime-Type"]}`,
+        `Content-Type: ${attachment.headers?.["Content-Type"]}`,
         `Content-Transfer-Encoding: ${attachment.headers?.["Content-Transfer-Encoding"]}`,
         `Content-Disposition: attachment; filename="${attachment.filename}"`,
         ``,
@@ -30,3 +30,7 @@ export class EmailBuilderAttachment implements EmailBuilderAttachmentClass {
     });
   }
 }
+
+//NOTE: Use Omit when you need to remove properties from an object type and possibly add them back with different types.
+//
+//NOTE: Use Exclude when you are dealing with union types and need to remove specific types from the union.

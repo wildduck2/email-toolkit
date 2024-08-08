@@ -24,7 +24,7 @@ header
 const attachment = new EmailBuilderAttachment();
 attachment.addAttachment({
   headers: {
-    "Mime-Type": "text/html",
+    "Content-Type": 'text/plain; charset="utf8"',
     "Content-Transfer-Encoding": "base64",
     "Content-Disposition": 'attachment; filename="test.txt"',
   },
