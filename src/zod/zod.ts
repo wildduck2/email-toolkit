@@ -16,7 +16,7 @@ export const HeadersTypeSchema = z.object({
   Cc: z.string().optional(),
   Bcc: z.string().optional(),
   Date: z.string().optional(),
-  "In-Reply-To": z.string().optional(),
+  "In-Reply-To": z.string().email().optional(),
   "Content-Type": ContentTypeSchema.optional(),
   "Content-Transfer-Encoding": ContentTransferEncodingSchema.optional(),
   "MIME-Version": z.string().optional(),

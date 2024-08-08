@@ -1,5 +1,6 @@
 import { EmailValidator } from "../EmailValidator";
 import type { MIMEType } from "../EmailBuilder";
+import type { EmailType } from "./EmailBuilderHeader.types";
 import type { ContentTransferEncoding } from "../index.types";
 import type { CharsetType } from "../zod";
 import type {
@@ -69,7 +70,7 @@ export class EmailBuilderHeader
     return this;
   }
 
-  public setInReplyTo(InReplyTo: string): this {
+  public setInReplyTo(InReplyTo: EmailType): this {
     this.headers["In-Reply-To"] = InReplyTo;
     return this;
   }
