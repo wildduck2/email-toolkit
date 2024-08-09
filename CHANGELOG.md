@@ -1,5 +1,15 @@
 # @ahmedayob/email-builder
 
+## 0.2.0
+
+### Minor Changes
+
+- da3c9c5: new version
+
+### Patch Changes
+
+- da3c9c5: build fix
+
 ## 0.1.10
 
 ### Patch Changes
