@@ -54,5 +54,8 @@ export * from "./zod";
 // const email = new EmailBuilder();
 // email.messagebody = "this is message body";
 //
-// const finalEmail = email.getRawMessage(header.headers, attachment.attachments);
+// const finalEmail = email.getEncodedMessage(
+//   header.headers,
+//   attachment.attachments
+// );
 // console.log(finalEmail);

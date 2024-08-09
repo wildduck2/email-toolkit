@@ -3,7 +3,7 @@ import { Base64 } from "../../Base64";
 import type { AttachmentType } from "../EmailBuilder.types";
 import { EmailError } from "../../Error";
 import { EmailBuilder } from "../EmailBuilder";
-import type { HeadersType } from "../../EmailBiulderHeader";
+import { EmailBuilderHeader, type HeadersType } from "../../EmailBiulderHeader";
 
 describe("EmailBuilder", () => {
   let emailBuilder: EmailBuilder;
@@ -103,5 +103,45 @@ describe("EmailBuilder", () => {
     expect(result).toContain(
       Base64.encodeToBase64("This is a test attachment.")
     );
+  });
+
+  it("should encode the message correctly when no errors occur", () => {
+    const header = new EmailBuilderHeader();
+    header
+      .setFrom("sender <sender@example.com>")
+      .setTo("receiver <receiver@example.com>")
+      .setSubject("Test Email");
+
+    emailBuilder.messagebody = "This is a test email.";
+    const attachments: AttachmentType[] = [
+      {
+        size: 12,
+        mimeType: "text/plain",
+        attachmentId: "1",
+        filename: "test.txt",
+        attachmentContent: Base64.encodeToBase64("This is a test attachment."),
+        headers: {
+          "Content-Disposition": 'attachment; filename="test.txt"',
+          "Content-Type": 'text/html; charset="utf8"',
+          "Content-Transfer-Encoding": "base64",
+        },
+      },
+    ];
+
+    const encodedMessage = emailBuilder.getEncodedMessage(
+      header.headers,
+      attachments
+    );
+    const rawMessage = emailBuilder.getRawMessage(header.headers, attachments);
+
+    // Assert the message is correctly encoded in base64
+    expect(encodedMessage).toBe(Base64.encodeToBase64(rawMessage as string));
+  });
+
+  it("should return the error message if an EmailError occurs", () => {
+    const invalidHeader = {} as any;
+    const encodedMessage = emailBuilder.getEncodedMessage(invalidHeader);
+
+    expect(encodedMessage).toContain("The email message should contain a body");
   });
 });

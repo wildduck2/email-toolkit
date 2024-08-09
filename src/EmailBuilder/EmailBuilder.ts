@@ -95,11 +95,33 @@ export class EmailBuilder implements EmailBuilderClass {
       `Content-Type: ${headers["Content-Type"]}`,
       `Content-Transfer-Encoding: ${headers["Content-Transfer-Encoding"]}`,
       "",
-      Base64.encodeToBase64(MessagebodyString),
+      MessagebodyString,
       ...Attachments,
       "--boundary--",
     ].join("\r\n");
     return headersString;
+  }
+
+  /**
+   * Generates a base64-encoded email message from the provided headers and attachments.
+   *
+   * This method first constructs the raw email message using the provided headers and optional attachments.
+   * If the raw message construction results in an `EmailError`, the method returns the error message.
+   * Otherwise, it encodes the raw message in base64 format and returns it.
+   *
+   * @param headers - An object representing the email headers. Must conform to the `HeadersType` schema.
+   * @param attachments - (Optional) An array of attachments to be included in the email. Each attachment must conform to the `AttachmentType` schema.
+   * @returns The base64-encoded email message as a string, or an error message if an `EmailError` occurred.
+   */
+  public getEncodedMessage(
+    headers: HeadersType,
+    attachments?: AttachmentType[]
+  ): string {
+    const rawMessage = this.getRawMessage(headers, attachments);
+    if (rawMessage instanceof EmailError) {
+      return rawMessage.message;
+    }
+    return Base64.encodeToBase64(rawMessage);
   }
 
   /**
