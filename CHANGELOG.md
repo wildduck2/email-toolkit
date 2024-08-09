@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 0.1.9
+
+### Patch Changes
+
+- 305a4d5: new functinlaity
+
 ## 0.1.8
 
 ### Patch Changes
