@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 0.1.11
+
+### Patch Changes
+
+- 5f0d578: build fix
+
 ## 0.1.10
 
 ### Patch Changes
