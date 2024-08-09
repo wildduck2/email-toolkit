@@ -108,7 +108,7 @@ export class EmailBuilder implements EmailBuilderClass {
    * @returns {string} The encoded message body.
    */
   public getEncodedMessageBody(): string {
-    return Base64.encodeToBase64(this.formatMessageBody());
+    return this.formatMessageBody();
   }
 
   /**

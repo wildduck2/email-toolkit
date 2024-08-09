@@ -58,9 +58,7 @@ describe("EmailBuilder", () => {
   it("should encode the message body in Base64", () => {
     emailBuilder.messagebody = "This is a test email.";
     const encodedBody = emailBuilder.getEncodedMessageBody();
-    expect(encodedBody).toBe(
-      Base64.encodeToBase64(Base64.encodeToBase64("This is a test email."))
-    );
+    expect(encodedBody).toBe(Base64.encodeToBase64("This is a test email."));
   });
 
   it("should generate the correct signature block", () => {
