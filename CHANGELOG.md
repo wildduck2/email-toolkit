@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 0.2.1
+
+### Patch Changes
+
+- ab5829d: new readme
+
 ## 0.2.0
 
 ### Minor Changes
