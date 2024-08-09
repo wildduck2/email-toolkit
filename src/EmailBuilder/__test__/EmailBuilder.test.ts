@@ -144,7 +144,7 @@ describe("EmailBuilder", () => {
   });
 
   it("should set the email signature correctly", () => {
-    const signatureData: NonNullableType<GetSignatureType> = {
+    const signatureData: NonNullableType<Omit<GetSignatureType, "from">> = {
       url: "https://example.com",
       name: "Example App",
     };

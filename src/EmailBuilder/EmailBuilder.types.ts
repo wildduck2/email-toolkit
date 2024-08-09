@@ -16,7 +16,14 @@ export type GetSignatureType = {
 
 export type MIMEType = typeof MIMETypes;
 
-export interface EmailBuilderClass {}
+export declare class EmailBuilderClass {
+  public constructor();
+  public getSignature({ from, url, name }: GetSignatureType): string[];
+  public setSignature({
+    name,
+    url,
+  }: NonNullableType<Omit<GetSignatureType, "from">>): this;
+}
 
 export interface ApplicationSignature {
   from: string;

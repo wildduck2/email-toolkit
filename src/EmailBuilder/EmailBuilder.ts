@@ -35,7 +35,7 @@ export class EmailBuilder implements EmailBuilderClass {
    *
    * @type {ApplicationSignature}
    */
-  applicationSignature: ApplicationSignature = {
+  applicationSignature: Omit<ApplicationSignature, "from"> = {
     url: "https://github.com/wildduck2",
     name: "ahmed ayob",
   };
@@ -236,7 +236,7 @@ export class EmailBuilder implements EmailBuilderClass {
    * @param {Object} params - The signature details.
    * @param {string} params.url - The URL associated with the email signature, such as the website or application URL.
    * @param {string} params.name - The name associated with the email signature, such as the name of the application or service.
-   * @returns {void}
+   * @returns {this}
    *
    * @example
    * emailBuilder.setSignature({
@@ -247,10 +247,11 @@ export class EmailBuilder implements EmailBuilderClass {
   public setSignature({
     url,
     name,
-  }: NonNullableType<Omit<GetSignatureType, "from">>): void {
+  }: NonNullableType<Omit<GetSignatureType, "from">>): this {
     this.applicationSignature = {
       url,
       name,
     };
+    return this;
   }
 }
