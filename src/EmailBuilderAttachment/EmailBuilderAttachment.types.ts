@@ -1,10 +1,10 @@
 import type { z } from "zod";
 import type { TupleUnion } from "../EmailBiulderHeader";
 import type { MIMEType } from "../EmailBuilder";
-import {
+import type {
+  AttachmentContentType,
   AttachmentHeaderSchema,
-  type AttachmentContentType,
-  type ContentDispositionType,
+  ContentDispositionType,
 } from "../zod";
 
 export declare class EmailBuilderAttachmentClass {

@@ -1,5 +1,5 @@
-const encoder = new TextEncoder();
 const decoder = new TextDecoder();
+const encoder = new TextEncoder();
 
 /**
  * Utility class for Base64 encoding and decoding.
@@ -22,10 +22,10 @@ export class Base64 {
   }
 
   /**
-   * Decodes a Base64 encoded string back to string representation.
+   * Decodes a Base64 encoded string back to its original string representation.
    *
    * @param {string} input - The Base64 encoded string to be decoded.
-   * @returns {string} The decoded binary string.
+   * @returns {string} The decoded string.
    *
    * @example
    * const decoded = Base64.decodeToString('aGVsbG8gd29ybGQ=');
@@ -73,7 +73,17 @@ export class Base64 {
     return encodeURIComponent(this.encodeToBase64(input));
   }
 
+  /**
+   * Encodes a string into Base64 and returns the result as a Uint8Array.
+   *
+   * @param {string} input - The string to be encoded.
+   * @returns {Uint8Array} The encoded Uint8Array.
+   *
+   * @example
+   * const encodedBuffer = Base64.encodeToBuffer('hello world');
+   * console.log(new TextDecoder().decode(encodedBuffer)); // Outputs: hello world
+   */
   public static encodeToBuffer(input: string): Uint8Array {
-    return Base64.decodeToBuffer(this.encodeToBase64(input));
+    return this.decodeToBuffer(this.encodeToBase64(input));
   }
 }

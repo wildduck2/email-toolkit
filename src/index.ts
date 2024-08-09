@@ -34,6 +34,18 @@ attachment.addAttachment({
   attachmentId: "1234",
   attachmentContent: Base64.encodeToBase64("test"),
 });
+attachment.addAttachment({
+  headers: {
+    "Content-Type": 'text/plain; charset="utf-8"',
+    "Content-Transfer-Encoding": "base64",
+    "Content-Disposition": 'attachment; filename="test.txt"',
+  },
+  size: 1234,
+  filename: "test.txt",
+  mimeType: "text/plain",
+  attachmentId: "1234",
+  attachmentContent: Base64.encodeToBase64("test"),
+});
 
 // console.log(header.attachments);
 

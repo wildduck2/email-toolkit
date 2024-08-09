@@ -1,3 +1,10 @@
+import type {
+  HeadernameType,
+  HeadersType,
+  TupleUnion,
+  ValueType,
+} from "../EmailBiulderHeader";
+import type { AttachmentHeaderType } from "../EmailBuilderAttachment/EmailBuilderAttachment.types";
 import type { ContentTransferEncoding } from "../index.types";
 import type { MIMETypes } from "../zod/zod.types";
 
@@ -67,7 +74,7 @@ export type AttachmentType = {
   size: number;
   attachmentId: string;
   attachmentContent: string;
-  headers: HeadersType;
+  headers: AttachmentHeaderType;
   filename: string;
   mimeType: TupleUnion<MIMEType>;
 };

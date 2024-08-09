@@ -4,27 +4,48 @@ import {
   type EmailBuilderClass,
   type GetSignatureType,
 } from "./EmailBuilder.types";
-import { EmailBuilderUtils } from "./EmailBuilderUtils";
-import type { HeadersType } from "../EmailBiulderHeader";
 import { Base64 } from "../Base64";
 import { EmailError } from "../Error";
 import { format } from "date-fns";
+import type { HeadersType } from "../EmailBiulderHeader";
 
-export class EmailBuilder
-  extends EmailBuilderUtils
-  implements EmailBuilderClass
-{
+/**
+ * Class representing an EmailBuilder.
+ *
+ * @implements {EmailBuilderClass}
+ */
+export class EmailBuilder implements EmailBuilderClass {
+  /**
+   * The body of the email message.
+   * @type {string | null}
+   */
   messagebody: string | null = null;
+
+  /**
+   * Application signature details.
+   * @type {ApplicationSignature}
+   */
   applicationSignature: ApplicationSignature = {
     url: "https://github.com/wildduck2",
     name: "ahmed ayob",
   };
 
-  constructor() {
-    super();
-  }
+  /**
+   * Creates an instance of EmailBuilder.
+   */
+  constructor() {}
 
-  public getRawMessage(headers: HeadersType, attachments?: AttachmentType[]) {
+  /**
+   * Generates the raw email message with headers and optional attachments.
+   *
+   * @param {HeadersType} headers - The headers for the email.
+   * @param {AttachmentType[]} [attachments] - Optional attachments to include in the email.
+   * @returns {string | EmailError} The raw email message or an EmailError if the message body is missing.
+   */
+  public getRawMessage(
+    headers: HeadersType,
+    attachments?: AttachmentType[]
+  ): string | EmailError {
     const MessageBody = this.formatMessageBody();
     if (!this.messagebody) {
       return new EmailError({
@@ -81,9 +102,21 @@ export class EmailBuilder
     return headersString;
   }
 
-  public getEncodedMessageBody() {
+  /**
+   * Encodes the message body in Base64 format.
+   *
+   * @returns {string} The encoded message body.
+   */
+  public getEncodedMessageBody(): string {
     return Base64.encodeToBase64(this.formatMessageBody());
   }
+
+  /**
+   * Generates the signature block for the email.
+   *
+   * @param {GetSignatureType} signatureDetails - An object containing the sender's email, application URL, and name.
+   * @returns {string[]} The formatted signature block as an array of strings.
+   */
   public getSignature({ from, url, name }: GetSignatureType): string[] {
     return [
       ``,
@@ -96,7 +129,13 @@ export class EmailBuilder
     ];
   }
 
-  private formatMessageBody() {
-    return Base64.encodeToBase64(this.messagebody);
+  /**
+   * Formats the message body and encodes it in Base64.
+   *
+   * @private
+   * @returns {string} The formatted and encoded message body.
+   */
+  private formatMessageBody(): string {
+    return Base64.encodeToBase64(this.messagebody as string);
   }
 }

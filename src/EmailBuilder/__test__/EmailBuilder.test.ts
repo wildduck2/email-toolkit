@@ -1,78 +1,109 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import { EmailBuilder } from "../EmailBuilder";
-import type { AddMessageType, HeadersType } from "../EmailBuilder.types";
 import { Base64 } from "../../Base64";
+import type { AttachmentType } from "../EmailBuilder.types";
+import { EmailError } from "../../Error";
+import { EmailBuilder } from "../EmailBuilder";
+import type { HeadersType } from "../../EmailBiulderHeader";
 
 describe("EmailBuilder", () => {
   let emailBuilder: EmailBuilder;
+  let headers: HeadersType;
 
   beforeEach(() => {
     emailBuilder = new EmailBuilder();
+    headers = {
+      From: "sender <sender@example.com>",
+      To: "receiver <receiver@example.com>",
+      Subject: "Test Email",
+      "Content-Type": "text/plain",
+      "Content-Transfer-Encoding": "7bit",
+      Date: undefined,
+      Cc: undefined,
+      Bcc: undefined,
+      Charset: undefined,
+      "In-Reply-To": undefined,
+      "MIME-Version": undefined,
+    };
   });
 
-  const headers: HeadersType = {
-    Date: "Wed, 31 Jul 2024 13:39:10 GMT",
-    From: "example <example@example.com>",
-    To: "example <example@example.com>",
-    Subject: "Test Email",
-    "Content-Type": "text/html",
-    "Content-Transfer-Encoding": "base64",
-  };
-  const message: AddMessageType = {
-    data: "<p>Hello, world!</p>",
-    charset: "UTF-8",
-    headers: headers,
-    encoding: "7bit",
-    contentType: "text/plain",
-  };
+  it("should generate a raw message correctly", () => {
+    emailBuilder.messagebody = "This is a test email.";
+    const result = emailBuilder.getRawMessage(headers);
 
-  it("should create an email with the given message", () => {
-    emailBuilder.addMessage(message);
+    const decodedResult = result as string;
 
-    const rawMessage = emailBuilder.asRaw();
-    expect(rawMessage).toContain("Hello, world!");
-    expect(rawMessage).toContain("From: example <example@example.com>");
-    expect(rawMessage).toContain("To: example <example@example.com>");
-    expect(rawMessage).toContain("Subject: Test Email");
+    const expectedBody = [
+      `To: receiver <receiver@example.com>`,
+      `From: sender <sender@example.com>`,
+      `Subject: Test Email`,
+      `Content-Type: multipart/mixed; boundary="boundary"`,
+      ``,
+      `--boundary`,
+      `Content-Type: text/plain`,
+      `Content-Transfer-Encoding: 7bit`,
+      ``,
+    ].join("\r\n");
+
+    expect(decodedResult).toContain(expectedBody);
   });
 
-  it("should create a file with the encoded message", () => {
-    emailBuilder.addMessage(message);
-
-    const file = emailBuilder.createFileWithMessage();
-    expect(file.type).toBe("application/octet-stream");
-    expect(file.data).toBe(Base64.encodeToBase64(emailBuilder.asRaw()));
+  it("should return an EmailError if message body is missing", () => {
+    const result = emailBuilder.getRawMessage(headers);
+    expect(result).toBeInstanceOf(EmailError);
+    expect((result as EmailError).message).toBe(
+      "The email message should contain a body"
+    );
   });
 
-  it("should set MIME type", () => {
-    emailBuilder.setMimeType("text/html");
-    expect(emailBuilder.MimeType).toBe("text/html");
+  it("should encode the message body in Base64", () => {
+    emailBuilder.messagebody = "This is a test email.";
+    const encodedBody = emailBuilder.getEncodedMessageBody();
+    expect(encodedBody).toBe(
+      Base64.encodeToBase64(Base64.encodeToBase64("This is a test email."))
+    );
   });
 
-  it("should set application signature", () => {
-    const signature = { name: "TestApp", url: "http://testapp.com" };
-    emailBuilder.setApplicationSignature(signature);
-    expect(emailBuilder.applicationSignature).toEqual(signature);
+  it("should generate the correct signature block", () => {
+    const signature = emailBuilder.getSignature({
+      from: "sender@example.com",
+      url: emailBuilder.applicationSignature.url,
+      name: emailBuilder.applicationSignature.name,
+    });
+
+    expect(signature).toEqual([
+      "",
+      `</div>`,
+      `<div style="margin: 1rem">`,
+      `---------------------------------`,
+      `<p>This email was sent from sender@example.com by <a style="color: blue" href="${emailBuilder.applicationSignature.url}" target="_blank">${emailBuilder.applicationSignature.name}</a> app</p>`,
+      `---------------------------------`,
+      `</div>`,
+    ]);
   });
 
-  it("should set data", () => {
-    emailBuilder.setData("<p>Hello, world!</p>");
-    expect(emailBuilder.messageBody).toBe("<p>Hello, world!</p>");
-  });
+  it("should include attachments in the raw message", () => {
+    emailBuilder.messagebody = "This is a test email.";
+    const attachments: AttachmentType[] = [
+      {
+        size: 12,
+        mimeType: "text/plain",
+        attachmentId: "1",
+        filename: "test.txt",
+        attachmentContent: Base64.encodeToBase64("This is a test attachment."),
+        headers: {
+          "Content-Disposition": 'attachment; filename="test.txt"',
+          "Content-Type": 'text/html; charset="utf8"',
+          "Content-Transfer-Encoding": "base64",
+        },
+      },
+    ];
 
-  it("should set snippet", () => {
-    emailBuilder.setSnippet("This is a snippet.");
-    expect(emailBuilder.snippet).toBe("This is a snippet.");
-  });
-
-  it("should set headers", () => {
-    emailBuilder.setHeaders(headers);
-    expect(emailBuilder.headers).toEqual(headers);
-  });
-
-  it("should set labels", () => {
-    const labels: Uppercase<string>[] = ["INBOX", "IMPORTANT"];
-    emailBuilder.setLabels(labels);
-    expect(emailBuilder.labels).toEqual(labels);
+    const result = emailBuilder.getRawMessage(headers, attachments);
+    expect(result).toContain(
+      'Content-Disposition: attachment; filename="test.txt"'
+    );
+    expect(result).toContain(
+      Base64.encodeToBase64("This is a test attachment.")
+    );
   });
 });
