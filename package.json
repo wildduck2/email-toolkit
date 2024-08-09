@@ -6,10 +6,10 @@
     "types": "dist/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/wildduck2/email-builder"
+        "url": "https://github.com/wildduck2/email-toolkit"
     },
-    "github": "https://github.com/wildduck2/email-builder",
-    "homepage": "https://github.com/wildduck2/email-builder",
+    "github": "https://github.com/wildduck2/email-toolkit",
+    "homepage": "https://github.com/wildduck2/email-toolkit",
     "files": [
         "/dist"
     ],
@@ -23,20 +23,30 @@
         "release": "pnpm run ci && changeset publish"
     },
     "keywords": [
-        "Base64",
-        "Encoding",
-        "Decoding",
-        "TextEncoder",
-        "TextDecoder",
-        "Client-side",
-        "typescript",
-        "Utility",
-        "URI Encoding",
-        "Web API"
+        "Email",
+        "Email Builder",
+        "Email Toolkit",
+        "Email Formatter",
+        "Email Validator",
+        "Email Attachment",
+        "Email Headers",
+        "MIME Types",
+        "Content Transfer Encoding",
+        "Email Encoding",
+        "Base64 Encoding",
+        "Email Construction",
+        "Email Composition",
+        "Email Parser",
+        "Email Management",
+        "Email Utilities",
+        "Email Tool",
+        "Node.js Email",
+        "JavaScript Email Toolkit",
+        "TypeScript Email Library"
     ],
     "author": "ahmed ayob",
     "license": "MIT",
-    "description": "The Base64 utility class is a lightweight JavaScript library designed for encoding and decoding Base64 strings on the client side. It provides simple and efficient methods to convert text to Base64, decode Base64 back to text, and handle Base64 encoded data with URI encoding. By leveraging modern web APIs like TextEncoder and TextDecoder, this library ensures compatibility and performance in various web environments.",
+    "description": "A powerful and flexible toolkit for building, validating, and processing emails with TypeScript. This library offers utilities for handling email headers, attachments, and encoding, making it easier to compose and manage emails programmatically.",
     "devDependencies": {
         "@changesets/cli": "^2.27.7",
         "@types/node": "^22.0.0",
