@@ -123,7 +123,7 @@ Validation schemas are available to ensure data correctness:
 
 ## Contributing
 
-Contributions are welcome! Please open issues and pull requests on the [GitHub repository](https://github.com/ahmedayob/email-toolkit).
+Contributions are welcome! Please open issues and pull requests on the [GitHub repository](https://github.com/wildduck2/email-toolkit).
 
 ## License
 
