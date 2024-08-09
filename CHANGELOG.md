@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 0.1.8
+
+### Patch Changes
+
+- 5cccbf9: refactored to be more type safe
+
 ## 0.1.7
 
 ### Patch Changes
