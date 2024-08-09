@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 0.2.2
+
+### Patch Changes
+
+- dab6d90: signature context
+
 ## 0.2.1
 
 ### Patch Changes
