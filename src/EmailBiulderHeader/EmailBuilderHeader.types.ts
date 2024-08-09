@@ -22,8 +22,8 @@ export declare class EmailBuilderHeaderClass {
   public setCharset(Charset: TupleUnion<typeof CharsetType>): this;
 }
 
-export type EmailTypeString = `${string}@${string}.${string}`;
-export type ValueType = `${string} <${EmailTypeString}>`;
+export type EmailTypeString = `<${string}@${string}.${string}>`;
+export type ValueType = `${string} ${EmailTypeString}`;
 export type TupleUnion<T extends readonly unknown[]> = T[number];
 export type HeaderskeyNameType = z.infer<typeof HeadersTypeSchema>;
 export type HeadernameType = keyof HeaderskeyNameType;

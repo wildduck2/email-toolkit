@@ -19,6 +19,7 @@ export type MIMEType = typeof MIMETypes;
 export interface EmailBuilderClass {}
 
 export interface ApplicationSignature {
+  from: string;
   name: string;
   url: string;
 }
@@ -77,4 +78,8 @@ export type AttachmentType = {
   headers: AttachmentHeaderType;
   filename: string;
   mimeType: TupleUnion<MIMEType>;
+};
+
+export type NonNullableType<T> = {
+  [K in keyof T]: NonNullable<T[K]>;
 };

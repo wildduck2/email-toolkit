@@ -11,7 +11,12 @@ import type {
  * and generating the necessary MIME parts for these attachments in an email message.
  * It extends the `EmailValidator` class to leverage its validation functionality
  * and implements the `EmailBuilderAttachmentClass` interface to ensure proper attachment handling.
+ *
+ * @class
+ * @extends EmailValidator
+ * @implements EmailBuilderAttachmentClass
  */
+
 export class EmailBuilderAttachment
   extends EmailValidator
   implements EmailBuilderAttachmentClass
@@ -34,7 +39,10 @@ export class EmailBuilderAttachment
 
   /**
    * Initializes a new instance of the `EmailBuilderAttachment` class.
-   * Calls the constructor of the `EmailValidator` class.
+   * Calls the constructor of the `EmailValidator` class to initialize inherited properties.
+   *
+   * @constructor
+   * @extends EmailValidator
    */
   constructor() {
     super();
@@ -42,10 +50,23 @@ export class EmailBuilderAttachment
 
   /**
    * Adds an attachment to the email.
-   * If there are no existing attachments, it initializes the `attachments` array.
    *
-   * @param {AttachmentType} attachment - The attachment to be added.
-   * @returns {this} - The current instance of `EmailBuilderAttachment` for method chaining.
+   * If there are no existing attachments, this method initializes the `attachments` array.
+   * It then adds the provided attachment to the array.
+   *
+   * @param {AttachmentType} attachment - The attachment to be added to the email. This should conform to the `AttachmentType` schema.
+   * @returns {this} - The current instance of `EmailBuilder` for method chaining, allowing further configuration of the email.
+   *
+   * @example
+   * const emailBuilder = new EmailBuilder();
+   * emailBuilder.addAttachment({
+   *   filename: "document.pdf",
+   *   content: "<base64-encoded-content>",
+   *   headers: {
+   *     "Content-Type": "application/pdf",
+   *     "Content-Transfer-Encoding": "base64"
+   *   }
+   * });
    */
   public addAttachment(attachment: AttachmentType): this {
     if (!this.attachments) {
@@ -57,9 +78,27 @@ export class EmailBuilderAttachment
 
   /**
    * Generates the MIME parts for all the attachments in the email.
-   * Returns an array of strings representing the attachment MIME parts.
+   *
+   * This method constructs and returns an array of strings, each representing a MIME part for an attachment.
+   * The MIME parts include headers for content type, transfer encoding, and disposition, followed by the attachment content.
+   * If no attachments are present, the method returns `undefined`.
    *
    * @returns {string[] | undefined} - An array of MIME part strings for the attachments, or `undefined` if no attachments are present.
+   *
+   * @example
+   * const emailBuilder = new EmailBuilder();
+   * emailBuilder.addAttachment({
+   *   filename: "document.pdf",
+   *   content: "<base64-encoded-content>",
+   *   headers: {
+   *     "Content-Type": "application/pdf",
+   *     "Content-Transfer-Encoding": "base64",
+   *     "Content-Disposition": "attachment"
+   *   }
+   * });
+   *
+   * const mimeParts = emailBuilder.getAttachment();
+   * // mimeParts will be an array of strings representing MIME parts for the attachments
    */
   public getAttachment(): string[] | undefined {
     return this.attachments?.flatMap((attachment) => {

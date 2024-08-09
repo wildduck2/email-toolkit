@@ -1,6 +1,10 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { Base64 } from "../../Base64";
-import type { AttachmentType } from "../EmailBuilder.types";
+import type {
+  AttachmentType,
+  GetSignatureType,
+  NonNullableType,
+} from "../EmailBuilder.types";
 import { EmailError } from "../../Error";
 import { EmailBuilder } from "../EmailBuilder";
 import { EmailBuilderHeader, type HeadersType } from "../../EmailBiulderHeader";
@@ -137,5 +141,19 @@ describe("EmailBuilder", () => {
     const encodedMessage = emailBuilder.getEncodedMessage(invalidHeader);
 
     expect(encodedMessage).toContain("The email message should contain a body");
+  });
+
+  it("should set the email signature correctly", () => {
+    const signatureData: NonNullableType<GetSignatureType> = {
+      url: "https://example.com",
+      name: "Example App",
+    };
+
+    emailBuilder.setSignature(signatureData);
+
+    expect(emailBuilder.applicationSignature).toEqual({
+      url: "https://example.com",
+      name: "Example App",
+    });
   });
 });

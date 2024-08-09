@@ -3,6 +3,7 @@ import {
   type AttachmentType,
   type EmailBuilderClass,
   type GetSignatureType,
+  type NonNullableType,
 } from "./EmailBuilder.types";
 import { Base64 } from "../Base64";
 import { EmailError } from "../Error";
@@ -10,19 +11,28 @@ import { format } from "date-fns";
 import type { HeadersType } from "../EmailBiulderHeader";
 
 /**
- * Class representing an EmailBuilder.
+ * Class representing an `EmailBuilder`.
+ *
+ * This class is used for constructing and validating email headers, as well as generating email messages with optional attachments and signatures.
+ * It implements the `EmailBuilderClass` interface, providing methods for setting various email headers and constructing raw or encoded email messages.
  *
  * @implements {EmailBuilderClass}
  */
 export class EmailBuilder implements EmailBuilderClass {
   /**
    * The body of the email message.
+   *
+   * This property holds the content of the email message. It can be a string containing the message body or `null` if no body is set.
+   *
    * @type {string | null}
    */
   messagebody: string | null = null;
 
   /**
    * Application signature details.
+   *
+   * This property contains the details for the email signature, including the URL and name associated with the application or service.
+   *
    * @type {ApplicationSignature}
    */
   applicationSignature: ApplicationSignature = {
@@ -31,16 +41,49 @@ export class EmailBuilder implements EmailBuilderClass {
   };
 
   /**
-   * Creates an instance of EmailBuilder.
+   * Creates an instance of the `EmailBuilder` class.
+   *
+   * The constructor initializes an instance of `EmailBuilder`, setting up default values for `messagebody` and `applicationSignature`.
    */
   constructor() {}
 
   /**
    * Generates the raw email message with headers and optional attachments.
    *
-   * @param {HeadersType} headers - The headers for the email.
-   * @param {AttachmentType[]} [attachments] - Optional attachments to include in the email.
-   * @returns {string | EmailError} The raw email message or an EmailError if the message body is missing.
+   * This method constructs the raw email message by combining the provided headers, message body, and any optional
+   * attachments. It formats the email content as HTML and includes boundary markers for multipart content.
+   * If the email message body is missing, it returns an `EmailError`.
+   *
+   * @param {HeadersType} headers - The headers for the email. This includes fields such as "To", "From", "Subject", etc.
+   * @param {AttachmentType[]} [attachments] - Optional attachments to include in the email. Each attachment includes
+   *   headers, content type, and content.
+   * @returns {string | EmailError} The raw email message formatted as a string. If the message body is missing,
+   *   returns an `EmailError` indicating that the message body is required.
+   *
+   * @example
+   * const emailBuilder = new EmailBuilder();
+   * emailBuilder.messagebody = "This is the body of the email.";
+   * const rawMessage = emailBuilder.getRawMessage(
+   *   {
+   *     To: "recipient <recipient@example.com>",
+   *     From: "sender <sender@example.com>",
+   *     Subject: "Test Email",
+   *     "Content-Type": "text/html",
+   *     "Content-Transfer-Encoding": "quoted-printable"
+   *   },
+   *   [
+   *     {
+   *       headers: {
+   *         "Content-Type": "text/plain; charset=\"utf-8\"",
+   *         "Content-Transfer-Encoding": "base64",
+   *         "Content-Disposition": "attachment; filename=\"test.txt\""
+   *       },
+   *       filename: "test.txt",
+   *       attachmentContent: "dGVzdCBjb250ZW50"
+   *     }
+   *   ]
+   * );
+   * console.log(rawMessage);
    */
   public getRawMessage(
     headers: HeadersType,
@@ -67,7 +110,11 @@ export class EmailBuilder implements EmailBuilderClass {
       ``,
       `</div>`,
       ``,
-      this.getSignature({ from: headers.From, ...this.applicationSignature }),
+      this.getSignature({
+        ...this.applicationSignature,
+        from: headers.From,
+      }),
+      `</div>`,
     ].join("\r\n");
 
     const Attachments =
@@ -100,17 +147,41 @@ export class EmailBuilder implements EmailBuilderClass {
     ].join("\r\n");
     return headersString;
   }
-
   /**
    * Generates a base64-encoded email message from the provided headers and attachments.
    *
    * This method first constructs the raw email message using the provided headers and optional attachments.
-   * If the raw message construction results in an `EmailError`, the method returns the error message.
-   * Otherwise, it encodes the raw message in base64 format and returns it.
+   * If the raw message construction results in an `EmailError`, it returns the error message. Otherwise,
+   * it encodes the raw message in base64 format and returns the encoded string.
    *
-   * @param headers - An object representing the email headers. Must conform to the `HeadersType` schema.
-   * @param attachments - (Optional) An array of attachments to be included in the email. Each attachment must conform to the `AttachmentType` schema.
-   * @returns The base64-encoded email message as a string, or an error message if an `EmailError` occurred.
+   * @param {HeadersType} headers - An object representing the email headers. This should include fields such as "To", "From", "Subject", etc.
+   * @param {AttachmentType[]} [attachments] - Optional. An array of attachments to be included in the email. Each attachment should conform to the `AttachmentType` schema.
+   * @returns {string} The base64-encoded email message as a string. If an `EmailError` occurred during raw message construction, the method returns the error message.
+   *
+   * @example
+   * const emailBuilder = new EmailBuilder();
+   * emailBuilder.messagebody = "This is the body of the email.";
+   * const encodedMessage = emailBuilder.getEncodedMessage(
+   *   {
+   *     To: "recipient <recipient@example.com>",
+   *     From: "sender <sender@example.com>",
+   *     Subject: "Test Email",
+   *     "Content-Type": "text/html",
+   *     "Content-Transfer-Encoding": "quoted-printable"
+   *   },
+   *   [
+   *     {
+   *       headers: {
+   *         "Content-Type": "text/plain; charset=\"utf-8\"",
+   *         "Content-Transfer-Encoding": "base64",
+   *         "Content-Disposition": "attachment; filename=\"test.txt\""
+   *       },
+   *       filename: "test.txt",
+   *       attachmentContent: "dGVzdCBjb250ZW50"
+   *     }
+   *   ]
+   * );
+   * console.log(encodedMessage);
    */
   public getEncodedMessage(
     headers: HeadersType,
@@ -126,8 +197,23 @@ export class EmailBuilder implements EmailBuilderClass {
   /**
    * Generates the signature block for the email.
    *
-   * @param {GetSignatureType} signatureDetails - An object containing the sender's email, application URL, and name.
-   * @returns {string[]} The formatted signature block as an array of strings.
+   * This method creates a formatted signature block to be included in the email. The signature contains
+   * information about the sender and the application used to send the email. It returns the signature block
+   * as an array of strings, which can be included in the email body.
+   *
+   * @param {GetSignatureType} signatureDetails - An object containing the details for the signature. It should include:
+   *   - `from`: The sender's email address.
+   *   - `url`: The URL of the application used to send the email.
+   *   - `name`: The name of the application.
+   * @returns {string[]} An array of strings representing the formatted signature block.
+   *
+   * @example
+   * const signature = emailBuilder.getSignature({
+   *   from: "sender@example.com",
+   *   url: "https://example.com",
+   *   name: "ExampleApp"
+   * });
+   * console.log(signature.join("\n"));
    */
   public getSignature({ from, url, name }: GetSignatureType): string[] {
     return [
@@ -139,5 +225,32 @@ export class EmailBuilder implements EmailBuilderClass {
       `---------------------------------`,
       `</div>`,
     ];
+  }
+
+  /**
+   * Sets the signature details for the email.
+   *
+   * This method updates the `applicationSignature` property with the provided URL and name.
+   * The `url` and `name` parameters must be non-nullable and are used to personalize the email signature.
+   *
+   * @param {Object} params - The signature details.
+   * @param {string} params.url - The URL associated with the email signature, such as the website or application URL.
+   * @param {string} params.name - The name associated with the email signature, such as the name of the application or service.
+   * @returns {void}
+   *
+   * @example
+   * emailBuilder.setSignature({
+   *   url: "https://example.com",
+   *   name: "ExampleApp"
+   * });
+   */
+  public setSignature({
+    url,
+    name,
+  }: NonNullableType<Omit<GetSignatureType, "from">>): void {
+    this.applicationSignature = {
+      url,
+      name,
+    };
   }
 }
