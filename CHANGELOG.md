@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 0.1.9
+
+### Patch Changes
+
+- 0ede7c0: fixing bug with body encoding
+
 ## 0.1.8
 
 ### Patch Changes
