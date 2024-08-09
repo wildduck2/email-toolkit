@@ -46,7 +46,6 @@ export class EmailBuilder implements EmailBuilderClass {
     headers: HeadersType,
     attachments?: AttachmentType[]
   ): string | EmailError {
-    const MessageBody = this.formatMessageBody();
     if (!this.messagebody) {
       return new EmailError({
         message: "MessageBody is missed",
@@ -64,7 +63,7 @@ export class EmailBuilder implements EmailBuilderClass {
       `<p>To: ${headers.To}</p>`,
       `---------------------------------`,
       ``,
-      `${MessageBody}`,
+      `${this.messagebody}`,
       ``,
       `</div>`,
       ``,
@@ -125,15 +124,6 @@ export class EmailBuilder implements EmailBuilderClass {
   }
 
   /**
-   * Encodes the message body in Base64 format.
-   *
-   * @returns {string} The encoded message body.
-   */
-  public getEncodedMessageBody(): string {
-    return this.formatMessageBody();
-  }
-
-  /**
    * Generates the signature block for the email.
    *
    * @param {GetSignatureType} signatureDetails - An object containing the sender's email, application URL, and name.
@@ -149,15 +139,5 @@ export class EmailBuilder implements EmailBuilderClass {
       `---------------------------------`,
       `</div>`,
     ];
-  }
-
-  /**
-   * Formats the message body and encodes it in Base64.
-   *
-   * @private
-   * @returns {string} The formatted and encoded message body.
-   */
-  private formatMessageBody(): string {
-    return Base64.encodeToBase64(this.messagebody as string);
   }
 }
