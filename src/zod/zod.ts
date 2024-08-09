@@ -72,7 +72,7 @@ export const HeadersTypeSchema = z.object({
    * The email address that this message is a reply to.
    * @type {string | undefined}
    */
-  "In-Reply-To": z.string().email().optional(),
+  "In-Reply-To": z.string().optional(),
 
   /**
    * The content type of the email.

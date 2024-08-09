@@ -47,7 +47,7 @@ describe("EmailBuilderHeader", () => {
   });
 
   it('should set the "In-Reply-To" header', () => {
-    const inReplyTo = "message-id@example.com";
+    const inReplyTo = "<message-id@example.com>";
     emailBuilderHeader.setInReplyTo(inReplyTo);
     const headers = emailBuilderHeader.getHeaders();
     expect(headers["In-Reply-To"]).toBe(inReplyTo);

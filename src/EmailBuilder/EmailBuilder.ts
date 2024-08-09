@@ -35,7 +35,7 @@ export class EmailBuilder implements EmailBuilderClass {
    *
    * @type {ApplicationSignature}
    */
-  applicationSignature: ApplicationSignature = {
+  applicationSignature: Omit<ApplicationSignature, "from"> = {
     url: "https://github.com/wildduck2",
     name: "ahmed ayob",
   };

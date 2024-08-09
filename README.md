@@ -8,6 +8,7 @@ A powerful and flexible toolkit for building, validating, and processing emails 
 - **Attachment Handling**: Add, validate, and format email attachments.
 - **Encoding Utilities**: Encode content in Base64 for attachments.
 - **Validation**: Ensure email content, headers, and attachments are valid with built-in validation schemas.
+- **Custom Error Handling**: Handle email-related errors with a custom `EmailError` class.
 
 ## Installation
 
@@ -34,14 +35,14 @@ const header = new EmailBuilderHeader();
 header
   .setFrom("ahmed <ahmed@gmail.com>")
   .setTo("ahmed <ahmed@gmail.com>")
-  .setCc("ahmed <ahmed@gmai.com>")
-  .setBcc("ahmed <ahmed@gmai.com>")
-  .setSubject("this is wild duck email test subject")
+  .setCc("ahmed <ahmed@gmail.com>")
+  .setBcc("ahmed <ahmed@gmail.com>")
+  .setSubject("This is a test email subject")
   .setInReplyTo("ahmed@gmail.com")
   .setMIMEVersion("1.0")
   .setContentTransferEncoding("quoted-printable")
   .setContentType("text/html")
-  .setCharset("utf8");
+  .setCharset("utf-8");
 ```
 
 ### Email Attachment
@@ -49,8 +50,7 @@ header
 Add attachments to your email:
 
 ```typescript
-import { EmailBuilderAttachment } from "@ahmedayob/email-toolkit";
-import { Base64 } from "@ahmedayob/email-toolkit";
+import { EmailBuilderAttachment, Base64 } from "@ahmedayob/email-toolkit";
 
 const attachment = new EmailBuilderAttachment();
 attachment.addAttachment({
@@ -63,7 +63,9 @@ attachment.addAttachment({
   filename: "test.txt",
   mimeType: "text/plain",
   attachmentId: "1234",
-  attachmentContent: Base64.encodeToBase64("test"),
+  attachmentContent: Base64.encodeToBase64(
+    "This is the content of the attachment."
+  ),
 });
 ```
 
@@ -75,10 +77,39 @@ Combine headers and attachments to create the final email:
 import { EmailBuilder } from "@ahmedayob/email-toolkit";
 
 const email = new EmailBuilder();
-email.messagebody = "this is message body";
+email.messagebody = "<p>This is the message body</p>";
 
 const finalEmail = email.getRawMessage(header.headers, attachment.attachments);
 console.log(finalEmail);
+```
+
+### Encoding and Signature
+
+Generate base64-encoded messages and email signatures:
+
+```typescript
+import { EmailBuilder } from "@ahmedayob/email-toolkit";
+
+const email = new EmailBuilder();
+email.messagebody = "<p>This is the message body</p>";
+
+const encodedMessage = email.getEncodedMessage(
+  header.headers,
+  attachment.attachments
+);
+console.log(encodedMessage);
+
+email.setSignature({
+  url: "https://github.com/wildduck2",
+  name: "Ahmed Ayob",
+});
+
+const signature = email.getSignature({
+  from: "ahmed@example.com",
+  url: "https://github.com/wildduck2",
+  name: "Ahmed Ayob",
+});
+console.log(signature.join("\n"));
 ```
 
 ## API
@@ -105,10 +136,19 @@ console.log(finalEmail);
 
 - **messagebody**: Sets the body of the email.
 - **getRawMessage**(headers: HeadersType, attachments?: AttachmentType[]): Gets the raw email message.
+- **getEncodedMessage**(headers: HeadersType, attachments?: AttachmentType[]): Gets the base64-encoded email message.
+- **getSignature**(signatureDetails: GetSignatureType): Generates a formatted signature block.
+- **setSignature**(signatureDetails: NonNullableType<Omit<GetSignatureType, "from">>): Sets the email signature details.
 
 ### `Base64`
 
 - **encodeToBase64**(data: string): Encodes data to Base64.
+
+### `EmailError`
+
+- **name**: The name of the error.
+- **description**: A description of the error.
+- **constructor**({ message, description }: { message: string; description: string }): Constructs a new `EmailError`.
 
 ## Validation
 
@@ -123,7 +163,7 @@ Validation schemas are available to ensure data correctness:
 
 ## Contributing
 
-Contributions are welcome! Please open issues and pull requests on the [GitHub repository](https://github.com/wildduck2/email-toolkit).
+Contributions are welcome! Please open issues and pull requests on the [GitHub repository](https://github.com/ahmedayob/email-toolkit).
 
 ## License
 
