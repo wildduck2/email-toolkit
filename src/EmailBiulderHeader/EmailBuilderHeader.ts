@@ -1,6 +1,6 @@
 import { EmailValidator } from "../EmailValidator";
 import type { MIMEType } from "../EmailBuilder";
-import type { EmailType } from "./EmailBuilderHeader.types";
+import type { EmailTypeString } from "./EmailBuilderHeader.types";
 import type { ContentTransferEncoding } from "../index.types";
 import type { CharsetType } from "../zod";
 import type {
@@ -127,10 +127,10 @@ export class EmailBuilderHeader
   /**
    * Sets the "In-Reply-To" header.
    *
-   * @param {EmailType} InReplyTo - The email ID that this email is in reply to.
+   * @param {EmailTypeString} InReplyTo - The email ID that this email is in reply to.
    * @returns {this} The current instance of `EmailBuilderHeader`.
    */
-  public setInReplyTo(InReplyTo: EmailType): this {
+  public setInReplyTo(InReplyTo: EmailTypeString): this {
     this.headers["In-Reply-To"] = InReplyTo;
     return this;
   }
