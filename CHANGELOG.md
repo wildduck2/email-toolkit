@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 0.1.10
+
+### Patch Changes
+
+- 4916718: adding get message encoded
+
 ## 0.1.9
 
 ### Patch Changes
