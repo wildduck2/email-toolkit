@@ -1,115 +1,130 @@
-# @ahmedayob/email-builder
+# `@ahmedayob/email-toolkit`
 
-`@ahmedayob/email-builder` is a TypeScript library for building and manipulating MIME (Multipurpose Internet Mail Extensions) messages. This library provides an easy-to-use API for creating, modifying, and encoding MIME messages, making it ideal for email and other internet-based communication systems.
+A powerful and flexible toolkit for building, validating, and processing emails with TypeScript. This library offers utilities for handling email headers, attachments, and encoding, making it easier to compose and manage emails programmatically.
 
 ## Features
 
-- **Create and Manipulate MIME Messages**: Easily create and edit MIME messages.
-- **Base64 Encoding/Decoding**: Encode and decode MIME parts using Base64 encoding.
-- **Header Management**: Set and retrieve various headers including "Reply-To" and "Bcc".
-- **MIME Boundaries**: Generate unique MIME boundaries for different parts of a message.
-- **Utility Functions**: Convenient functions for encoding and decoding Base64 strings and URI encoding.
+- **Email Header Management**: Easily create and manage email headers.
+- **Attachment Handling**: Add, validate, and format email attachments.
+- **Encoding Utilities**: Encode content in Base64 for attachments.
+- **Validation**: Ensure email content, headers, and attachments are valid with built-in validation schemas.
 
 ## Installation
 
-You can install `@ahmedayob/email-builder` using npm or yarn:
+To install the toolkit, use npm or yarn:
 
 ```bash
-npm install @ahmedayob/email-builder
-```
-
-or
-
-```bash
-yarn add @ahmedayob/email-builder
+npm install @ahmedayob/email-toolkit
+# or
+yarn add @ahmedayob/email-toolkit
 ```
 
 ## Usage
 
-Here’s a basic example of how to use the `@ahmedayob/email-builder` library:
+Here's a quick guide on how to use the library:
+
+### Email Header
+
+Create and configure email headers:
 
 ```typescript
-import { MimeBuilder, Base64 } from "@ahmedayob/email-builder";
+import { EmailBuilderHeader } from "@ahmedayob/email-toolkit";
 
-// Create a new MIME message
-const mimeMessage = new MimeBuilder();
-mimeMessage.setHeader("From", "sender@example.com");
-mimeMessage.setHeader("To", "recipient@example.com");
-mimeMessage.setHeader("Subject", "Hello World");
-mimeMessage.setHeader("Reply-To", "reply@example.com");
+const header = new EmailBuilderHeader();
+header
+  .setFrom("ahmed <ahmed@gmail.com>")
+  .setTo("ahmed <ahmed@gmail.com>")
+  .setCc("ahmed <ahmed@gmai.com>")
+  .setBcc("ahmed <ahmed@gmai.com>")
+  .setSubject("this is wild duck email test subject")
+  .setInReplyTo("ahmed@gmail.com")
+  .setMIMEVersion("1.0")
+  .setContentTransferEncoding("quoted-printable")
+  .setContentType("text/html")
+  .setCharset("utf8");
+```
 
-// Add a text part
-mimeMessage.addPart({
-  type: "text/plain",
-  content: "This is a sample email message.",
+### Email Attachment
+
+Add attachments to your email:
+
+```typescript
+import { EmailBuilderAttachment } from "@ahmedayob/email-toolkit";
+import { Base64 } from "@ahmedayob/email-toolkit";
+
+const attachment = new EmailBuilderAttachment();
+attachment.addAttachment({
+  headers: {
+    "Content-Type": 'text/plain; charset="utf-8"',
+    "Content-Transfer-Encoding": "base64",
+    "Content-Disposition": 'attachment; filename="test.txt"',
+  },
+  size: 1234,
+  filename: "test.txt",
+  mimeType: "text/plain",
+  attachmentId: "1234",
+  attachmentContent: Base64.encodeToBase64("test"),
 });
+```
 
-// Generate MIME boundaries
-mimeMessage.generateBoundaries();
+### Building the Email
 
-// Retrieve headers
-const headers = mimeMessage.getHeaders();
-console.log(headers);
+Combine headers and attachments to create the final email:
 
-// Encode a string to Base64
-const encodedString = Base64.encodeToBase64("Sample content");
-console.log(encodedString);
+```typescript
+import { EmailBuilder } from "@ahmedayob/email-toolkit";
 
-// Decode a Base64 string
-const decodedString = Base64.decodeToBinary(encodedString);
-console.log(decodedString);
+const email = new EmailBuilder();
+email.messagebody = "this is message body";
+
+const finalEmail = email.getRawMessage(header.headers, attachment.attachments);
+console.log(finalEmail);
 ```
 
 ## API
 
-### MimeBuilder
+### `EmailBuilderHeader`
 
-- **`setHeader(name: string, value: unknown): string`**
-  Sets a MIME header with the given name and value.
+- **setFrom**(address: string): Sets the "From" header.
+- **setTo**(address: string): Sets the "To" header.
+- **setCc**(address: string): Sets the "Cc" header.
+- **setBcc**(address: string): Sets the "Bcc" header.
+- **setSubject**(subject: string): Sets the email subject.
+- **setInReplyTo**(messageId: string): Sets the "In-Reply-To" header.
+- **setMIMEVersion**(version: string): Sets the "MIME-Version" header.
+- **setContentTransferEncoding**(encoding: string): Sets the "Content-Transfer-Encoding" header.
+- **setContentType**(type: string): Sets the "Content-Type" header.
+- **setCharset**(charset: string): Sets the charset.
 
-- **`getHeader(name: string): string`**
-  Retrieves the value of a specified MIME header.
+### `EmailBuilderAttachment`
 
-- **`setHeaders(obj: Record<string, unknown>): string[]`**
-  Sets multiple headers from an object where keys are header names and values are their corresponding values.
+- **addAttachment**(attachment: AttachmentType): Adds an attachment.
+- **getAttachment**(): Retrieves the formatted attachments.
 
-- **`getHeaders(): Record<string, unknown>`**
-  Retrieves all headers as an object.
+### `EmailBuilder`
 
-- **`generateBoundaries(): void`**
-  Generates unique MIME boundaries for different parts of the message.
+- **messagebody**: Sets the body of the email.
+- **getRawMessage**(headers: HeadersType, attachments?: AttachmentType[]): Gets the raw email message.
 
-- **`isArray(v: unknown): v is Array<unknown>`**
-  Checks if a value is an array.
+### `Base64`
 
-- **`isObject(v: unknown): v is Object`**
-  Checks if a value is an object.
+- **encodeToBase64**(data: string): Encodes data to Base64.
 
-### Base64
+## Validation
 
-- **`encodeToBase64(input: string): string`**
-  Encodes a string into Base64.
+Validation schemas are available to ensure data correctness:
 
-- **`decodeToBinary(input: string): string`**
-  Decodes a Base64 encoded string into its original binary form.
+- **HeadersTypeSchema**: Validates email headers.
+- **AttachmentHeaderSchema**: Validates attachment headers.
+- **StringSchema**: Validates strings.
+- **ContentTransferEncodingSchema**: Validates content transfer encodings.
+- **ContentTypeSchema**: Validates content types.
+- **CharsetTypeSchema**: Validates charset types.
 
-- **`deccodeToBuffer(input: string): Buffer`**
-  Decodes a Base64 encoded string into a Buffer object.
+## Contributing
 
-- **`toBufferURI(input: string): string`**
-  Encodes a string to Base64 and then URI encodes the result.
+Contributions are welcome! Please open issues and pull requests on the [GitHub repository](https://github.com/ahmedayob/email-toolkit).
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-## Contact
-
-For questions or feedback, please reach out to [ahmedayobbusiness@gmail.com](mailto:ahmedayobbusiness@gmail.com).
-
-## Links
-
-- [GitHub Repository](https://github.com/wildduck2/email-builder)
-- [Homepage](https://github.com/wildduck2/email-builder)
-
-This README provides a clear overview of the package, including its features, installation instructions, basic usage, API details, and contact information. Make sure to adjust any details if necessary, and add any additional sections or links that may be relevant.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.

@@ -1,12 +1,15 @@
 import { Base64 } from "./Base64";
-import { EmailBuilderHeader } from "./EmailBiulderHeader/EmailBuilderHeader";
+import { EmailBuilderHeader } from "./EmailBiulderHeader";
 import { EmailBuilder } from "./EmailBuilder";
+import { EmailBuilderAttachment } from "./EmailBuilderAttachment/EmailBuilderAttachment";
 
 export * from "./Base64";
-export * from "./Error";
 export * from "./EmailBuilder";
-
-import { EmailBuilderAttachment } from "./EmailBuilderAttachment/EmailBuilderAttachment";
+export * from "./EmailValidator";
+export * from "./EmailBiulderHeader";
+export * from "./EmailBuilderAttachment";
+export * from "./Error";
+export * from "./zod";
 
 const header = new EmailBuilderHeader();
 header

@@ -22,8 +22,8 @@ export declare class EmailBuilderHeaderClass {
   public setCharset(Charset: TupleUnion<typeof CharsetType>): this;
 }
 
-export type EmailType = `${string}@${string}.${string}`;
-export type ValueType = `${string} <${EmailType}>`;
+export type EmailTypeString = `${string}@${string}.${string}`;
+export type ValueType = `${string} <${EmailTypeString}>`;
 export type TupleUnion<T extends readonly unknown[]> = T[number];
 export type HeaderskeyNameType = z.infer<typeof HeadersTypeSchema>;
 export type HeadernameType = keyof HeaderskeyNameType;
@@ -50,5 +50,5 @@ export type HeadersType = {
   Charset: TupleUnion<typeof CharsetType> | undefined;
   "Content-Type": TupleUnion<MIMEType> | undefined;
   "Content-Transfer-Encoding"?: ContentTransferEncoding | undefined;
-  "In-Reply-To": EmailType | undefined;
+  "In-Reply-To": EmailTypeString | undefined;
 };
