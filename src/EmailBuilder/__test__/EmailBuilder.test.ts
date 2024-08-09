@@ -66,15 +66,15 @@ describe("EmailBuilder", () => {
       name: emailBuilder.applicationSignature.name,
     });
 
-    expect(signature).toEqual([
-      "",
-      `</div>`,
-      `<div style="margin: 1rem">`,
-      `---------------------------------`,
-      `<p>This email was sent from sender@example.com by <a style="color: blue" href="${emailBuilder.applicationSignature.url}" target="_blank">${emailBuilder.applicationSignature.name}</a> app</p>`,
-      `---------------------------------`,
-      `</div>`,
-    ]);
+    expect(signature).toEqual(
+      [
+        `<div style="margin: 1rem">`,
+        `---------------------------------`,
+        `<p>This email was sent from sender@example.com by <a style="color: blue;" href="${emailBuilder.applicationSignature.url}" target="_blank">${emailBuilder.applicationSignature.name}</a> app</p>`,
+        `---------------------------------`,
+        `</div>`,
+      ].join("\r\n")
+    );
   });
 
   it("should include attachments in the raw message", () => {

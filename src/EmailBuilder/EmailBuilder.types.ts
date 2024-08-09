@@ -18,7 +18,7 @@ export type MIMEType = typeof MIMETypes;
 
 export declare class EmailBuilderClass {
   public constructor();
-  public getSignature({ from, url, name }: GetSignatureType): string[];
+  public getSignature({ from, url, name }: GetSignatureType): string;
   public setSignature({
     name,
     url,

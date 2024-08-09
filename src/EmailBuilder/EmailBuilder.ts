@@ -215,16 +215,14 @@ export class EmailBuilder implements EmailBuilderClass {
    * });
    * console.log(signature.join("\n"));
    */
-  public getSignature({ from, url, name }: GetSignatureType): string[] {
+  public getSignature({ from, url, name }: GetSignatureType): string {
     return [
-      ``,
-      `</div>`,
       `<div style="margin: 1rem">`,
       `---------------------------------`,
-      `<p>This email was sent from ${from} by <a style="color: blue" href="${url}" target="_blank">${name}</a> app</p>`,
+      `<p>This email was sent from ${from} by <a style="color: blue;" href="${url}" target="_blank">${name}</a> app</p>`,
       `---------------------------------`,
       `</div>`,
-    ];
+    ].join("\r\n");
   }
 
   /**
