@@ -1,6 +1,6 @@
 # @ahmedayob/email-builder
 
-## 1.0.1
+## 1.0.3
 
 ### Major Changes
 

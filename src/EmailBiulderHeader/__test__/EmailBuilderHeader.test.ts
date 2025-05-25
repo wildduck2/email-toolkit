@@ -21,15 +21,15 @@ describe("EmailBuilderHeader", () => {
 	});
 
 	it('should set the "Cc" header', () => {
-		emailBuilderHeader.setCc("example <example@example.com>");
+		emailBuilderHeader.setCc(["example <example@example.com>"]);
 		const headers = emailBuilderHeader.getHeaders();
-		expect(headers.Cc).toBe("example <example@example.com>");
+		expect(headers.Cc).toStrictEqual(["example <example@example.com>"]);
 	});
 
 	it('should set the "Bcc" header', () => {
-		emailBuilderHeader.setBcc("example <example@example.com>");
+		emailBuilderHeader.setBcc(["example <example@example.com>"]);
 		const headers = emailBuilderHeader.getHeaders();
-		expect(headers.Bcc).toBe("example <example@example.com>");
+		expect(headers.Bcc).toStrictEqual(["example <example@example.com>"]);
 	});
 
 	it('should set the "Date" header', () => {

@@ -52,15 +52,15 @@ export const HeadersTypeSchema = z.object({
 
 	/**
 	 * The CC recipients of the email.
-	 * @type {string | undefined}
+	 * @type {string[] | undefined}
 	 */
-	Cc: z.string().optional(),
+	Cc: z.array(z.string()).optional(),
 
 	/**
 	 * The BCC recipients of the email.
-	 * @type {string | undefined}
+	 * @type {string[] | undefined}
 	 */
-	Bcc: z.string().optional(),
+	Bcc: z.array(z.string()).optional(),
 
 	/**
 	 * The date the email was sent.
