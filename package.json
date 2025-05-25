@@ -1,6 +1,6 @@
 {
 	"name": "@ahmedayob/email-toolkit",
-	"version": "0.2.2",
+	"version": "1.0.0",
 	"main": "index.js",
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
@@ -10,7 +10,9 @@
 	},
 	"github": "https://github.com/wildduck2/email-toolkit",
 	"homepage": "https://github.com/wildduck2/email-toolkit",
-	"files": ["/dist"],
+	"files": [
+		"/dist"
+	],
 	"private": false,
 	"scripts": {
 		"dev": "vitest",

@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 1.0.0
+
+### Major Changes
+
+- d361a90: fixed some imports
+
 ## 0.2.2
 
 ### Patch Changes
