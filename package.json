@@ -1,59 +1,57 @@
 {
-    "name": "@ahmedayob/email-toolkit",
-    "version": "0.2.2",
-    "main": "index.js",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/wildduck2/email-toolkit"
-    },
-    "github": "https://github.com/wildduck2/email-toolkit",
-    "homepage": "https://github.com/wildduck2/email-toolkit",
-    "files": [
-        "/dist"
-    ],
-    "private": false,
-    "scripts": {
-        "dev": "vitest",
-        "test": "vitest run",
-        "build": "tsup",
-        "lint": "tsc",
-        "ci": "pnpm run lint && pnpm run test && pnpm run build",
-        "release": "pnpm run ci && changeset publish"
-    },
-    "keywords": [
-        "Email",
-        "Email Builder",
-        "Email Toolkit",
-        "Email Formatter",
-        "Email Validator",
-        "Email Attachment",
-        "Email Headers",
-        "MIME Types",
-        "Content Transfer Encoding",
-        "Email Encoding",
-        "Base64 Encoding",
-        "Email Construction",
-        "Email Composition",
-        "Email Parser",
-        "Email Management",
-        "Email Utilities",
-        "Email Tool",
-        "Node.js Email",
-        "JavaScript Email Toolkit",
-        "TypeScript Email Library"
-    ],
-    "author": "ahmed ayob",
-    "license": "MIT",
-    "description": "A powerful and flexible toolkit for building, validating, and processing emails with TypeScript. This library offers utilities for handling email headers, attachments, and encoding, making it easier to compose and manage emails programmatically.",
-    "devDependencies": {
-        "@changesets/cli": "^2.27.7",
-        "@types/node": "^22.0.0",
-        "date-fns": "^3.6.0",
-        "tsup": "^8.2.3",
-        "typescript": "^5.5.4",
-        "vitest": "^2.0.4",
-        "zod": "^3.23.8"
-    }
+	"name": "@ahmedayob/email-toolkit",
+	"version": "0.2.2",
+	"main": "index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wildduck2/email-toolkit"
+	},
+	"github": "https://github.com/wildduck2/email-toolkit",
+	"homepage": "https://github.com/wildduck2/email-toolkit",
+	"files": ["/dist"],
+	"private": false,
+	"scripts": {
+		"dev": "vitest",
+		"test": "vitest run",
+		"build": "tsup",
+		"lint": "tsc",
+		"ci": "pnpm run lint && pnpm run test && pnpm run build",
+		"release": "pnpm run ci && changeset publish"
+	},
+	"keywords": [
+		"Email",
+		"Email Builder",
+		"Email Toolkit",
+		"Email Formatter",
+		"Email Validator",
+		"Email Attachment",
+		"Email Headers",
+		"MIME Types",
+		"Content Transfer Encoding",
+		"Email Encoding",
+		"Base64 Encoding",
+		"Email Construction",
+		"Email Composition",
+		"Email Parser",
+		"Email Management",
+		"Email Utilities",
+		"Email Tool",
+		"Node.js Email",
+		"JavaScript Email Toolkit",
+		"TypeScript Email Library"
+	],
+	"author": "ahmed ayob",
+	"license": "MIT",
+	"description": "A powerful and flexible toolkit for building, validating, and processing emails with TypeScript. This library offers utilities for handling email headers, attachments, and encoding, making it easier to compose and manage emails programmatically.",
+	"devDependencies": {
+		"@changesets/cli": "^2.27.7",
+		"@types/node": "^22.0.0",
+		"date-fns": "^3.6.0",
+		"tsup": "^8.2.3",
+		"typescript": "^5.5.4",
+		"vitest": "^2.0.4",
+		"zod": "^3.23.8"
+	}
 }
