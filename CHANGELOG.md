@@ -1,5 +1,11 @@
 # @ahmedayob/email-builder
 
+## 0.2.4
+
+### Patch Changes
+
+- dab6d90: fixed the cc and bcc to accept multiple
+
 ## 0.2.2
 
 ### Patch Changes
