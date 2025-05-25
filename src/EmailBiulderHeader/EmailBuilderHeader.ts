@@ -186,8 +186,8 @@ export class EmailBuilderHeader
 	 * // or with multiple addresses
 	 * emailHeader.setBcc("bcc1@example.com, bcc2@example.com");
 	 */
-	public setBcc(Bcc: ValueType): this {
-		this.headers.Bcc = Bcc as ValueType;
+	public setBcc(Bcc: ValueType[]): this {
+		this.headers.Bcc = Bcc as ValueType[];
 		return this;
 	}
 
