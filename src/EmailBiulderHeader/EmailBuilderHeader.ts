@@ -167,8 +167,8 @@ export class EmailBuilderHeader
 	 * // or with multiple addresses
 	 * emailHeader.setCc("cc1@example.com, cc2@example.com");
 	 */
-	public setCc(Cc: ValueType): this {
-		this.headers.Cc = Cc as ValueType;
+	public setCc(Cc: ValueType[]): this {
+		this.headers.Cc = Cc as ValueType[];
 		return this;
 	}
 

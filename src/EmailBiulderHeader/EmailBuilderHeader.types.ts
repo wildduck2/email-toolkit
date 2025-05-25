@@ -9,8 +9,8 @@ export declare class EmailBuilderHeaderClass {
 	public getHeaders(): HeadersType;
 	public setFrom(From: ValueType): this;
 	public setTo(To: ValueType): this;
-	public setCc(Cc: ValueType): this;
-	public setBcc(Bcc: ValueType): this;
+	public setCc(Cc: ValueType[]): this;
+	public setBcc(Bcc: ValueType[]): this;
 	public setDate(Date: string): this;
 	public setSubject(Subject: string): this;
 	public setInReplyTo(InReplyTo: string): this;
@@ -45,8 +45,8 @@ export type HeadersType = {
 } & {
 	From?: ValueType | undefined;
 	To?: ValueType | undefined;
-	Cc?: ValueType | undefined;
-	Bcc?: ValueType | undefined;
+	Cc?: ValueType[] | undefined;
+	Bcc?: ValueType[] | undefined;
 	Charset: TupleUnion<typeof CharsetType> | undefined;
 	"Content-Type": TupleUnion<MIMEType> | undefined;
 	"Content-Transfer-Encoding"?: ContentTransferEncoding | undefined;
